@@ -1,0 +1,32 @@
+# PDFs not included due to copyright
+data/raw/*.pdf
+**/January/*.pdf
+**/February/*.pdf
+**/March/*.pdf
+**/April/*.pdf
+**/May/*.pdf
+**/June/*.pdf
+**/July/*.pdf
+**/August/*.pdf
+**/September/*.pdf
+**/October/*.pdf
+**/November/*.pdf
+**/December/*.pdf
+
+# Python
+__pycache__/
+*.py[cod]
+.env
+venv/
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Backup files
+*.backup.xlsx
