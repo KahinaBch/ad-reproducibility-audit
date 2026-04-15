@@ -138,8 +138,9 @@ Script: `src/plot_ad_results.py`
 - Output: `plots/{year}/fig*.png`
 
 Notes:
-- Step 8 can optionally merge `keyword_scan_log.csv` and `sex_keyword_scan_log.csv` to fill missing fields.
+- Step 8 can optionally merge `keyword_scan_log.csv`, `sex_keyword_scan_log.csv`, and `dataset_scan_log.csv` to fill missing fields.
 - Step 8 can optionally read `author_gender_log.csv` to generate first/last author gender distribution figures.
+- Step 8 can optionally read the dataset catalogue JSON (default: `../ad-dataset-catalogue/data/neuroimaging_genetics.json`) to color dataset-mention plots by dataset origin.
 
 ## 4) Quality control checklist
 

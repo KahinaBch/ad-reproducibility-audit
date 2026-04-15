@@ -51,6 +51,35 @@ All figures produced by Step 8 are percent/proportion based (not raw counts), an
 
 ---
 
+## Results (2025 run)
+
+This repository includes a complete end-to-end run for 2025 under `data/raw/pdfs/2025/`, `workbooks/2025/`, and `plots/2025/`.
+
+Headline results by step:
+
+- **Step 1 (DOIs):** Crossref retrieval produced **6,931 DOIs** → `data/raw/ad_2025_dois.csv`.
+- **Step 2 (PDF sort + workbook):** **913 PDFs** were organized into month folders under `data/raw/pdfs/2025/{Month}/` and compiled into `workbooks/2025/AD-ReproducibleResearch_2025.xlsx` (**913 workbook rows**).
+- **Step 3 (Open-science keyword scan):** `workbooks/2025/keyword_scan_log.csv` created; Step 7 summary shows **810/913 papers (88.7%)** with an open-science keyword match and **86/913 papers (9.4%)** with an extracted repository link (including **80 GitHub links**).
+- **Step 4 (Sex-specific keywords):** `workbooks/2025/sex_keyword_scan_log.csv` created; Step 7 summary shows **233/913 papers (25.5%)** with sex-specific keywords.
+  - Sex-aware level breakdown in the workbook: **37 “sex-aware main focus”**, **196 “sex-aware consideration”**, remainder “none/unknown”.
+- **Step 4b (Dataset mentions):** `workbooks/2025/dataset_scan_log.csv` created; **482/913 PDFs (52.8%)** mentioned ≥1 known dataset.
+  - Most frequently detected datasets (counts): **ADNI (175)**, **NACC (136)**, **UK Biobank (92)**, **MAPT (72)**, **A4 Study (41)**.
+- **Step 5 (Manual curation):** Workbook columns `False Positive?`, `Shared code?`, `Shared data?` were manually reviewed/curated to validate scan outputs.
+- **Step 5b (Author metadata + gender, optional):** `workbooks/2025/author_gender_log.csv` created for first/last authors; used by Step 8 to generate gender distribution figures.
+- **Step 6 (Country extraction):** `workbooks/2025/pdf_affiliation_country_log.csv` created; Step 7 summary shows **905/913 papers (99.1%)** with an identified first-author country.
+- **Step 7 (Analysis):** `workbooks/2025/AD_2025_analysis.xlsx` generated. Key results:
+  - **Code sharing:** 809/913 (88.6%)
+  - **Data sharing:** 27/913 (3.0%)
+  - **Code OR data sharing:** 810/913 (88.7%)
+  - Hosting platforms detected in links (counts): **GitHub 80**, **OSF 4**, **Zenodo 2**
+- **Step 8 (Figures):** Figures written to `plots/2025/fig*.png` (see Step 8 section below for per-figure descriptions).
+
+Notes:
+- Step 7/8 “sharing” metrics are augmented using scan logs to avoid undercounting when workbook fields are blank.
+- Step 4b results are computed from the PDF scan log (one row per scanned PDF).
+
+---
+
 ## Prerequisites
 
 You will need:
@@ -174,6 +203,10 @@ python src/plot_ad_results.py \
   --out-dir plots/2023
 ```
 
+Output location:
+- If `--out-dir` is provided, all figures are written there.
+- Otherwise, the default is `plots/{year}/`.
+
 Optional inputs (defaults: looks for logs next to the workbook):
 ```bash
 python src/plot_ad_results.py \
@@ -181,8 +214,27 @@ python src/plot_ad_results.py \
   --year 2023 \
   --keyword-log-csv workbooks/2023/keyword_scan_log.csv \
   --sex-keyword-log-csv workbooks/2023/sex_keyword_scan_log.csv \
-  --author-gender-log-csv workbooks/2023/author_gender_log.csv
+  --author-gender-log-csv workbooks/2023/author_gender_log.csv \
+  --dataset-log-csv workbooks/2023/dataset_scan_log.csv \
+  --dataset-json ../ad-dataset-catalogue/data/neuroimaging_genetics.json
 ```
+
+Figures produced (all are percentages/proportions; one plot per file):
+- `fig1_sharing_by_month.png`: Monthly % of papers sharing code and/or data (year timeline).
+- `fig2_sex_keyword_analysis.png`: % of papers flagged as containing sex-specific keywords (overall).
+- `fig3_country_distribution.png`: Distribution of first-author countries (share of papers by country).
+- `fig4_hosting_platforms.png`: Breakdown of where shared resources are hosted (e.g., GitHub/OSF/Zenodo).
+- `fig6_sex_aware_level_distribution.png`: Distribution of “sex-aware level” categories (share of papers per level).
+- `fig7_top_sex_keywords.png`: Top matched sex-related keywords (share of papers mentioning each keyword).
+- `fig8_country_sharing_rate.png`: % sharing code/data by country (conditional sharing rate per country).
+- `fig9_github_link_rate.png`: % of papers with a GitHub link (overall).
+- `fig10_first_author_gender_distribution.png`: First-author gender distribution (from `author_gender_log.csv`).
+- `fig11_last_author_gender_distribution.png`: Last-author gender distribution (from `author_gender_log.csv`).
+- `fig12_dataset_proportions_all_papers.png`: Dataset mentions as % of all papers (denominator = all valid papers).
+- `fig13_dataset_proportions_dataset_found_papers.png`: Dataset mentions as % of dataset-mention papers only (denominator = papers with ≥1 dataset).
+
+Dataset figure coloring:
+- Bars are color-coded by dataset origin inferred from the dataset catalogue JSON (`origin` country list), grouped into region buckets (e.g., Americas/Europe/Asia/Multi-region).
 
 ---
 
@@ -215,6 +267,8 @@ plots/
     fig9_github_link_rate.png
     fig10_first_author_gender_distribution.png
     fig11_last_author_gender_distribution.png
+    fig12_dataset_proportions_all_papers.png
+    fig13_dataset_proportions_dataset_found_papers.png
 docs/
   REPRODUCIBILITY_PROTOCOL.md             ← End-to-end process and QC guidance
 ```
@@ -252,7 +306,6 @@ Title-only broad terms: `sex`, `gender`, `woman`, `female`
 
 ---
 
-## Output Structure
 ## License
 
 No license file is included in this sub-repository.

@@ -16,6 +16,7 @@ Adapted from: KahinaBch/mrm-reproducible-research-2025
 """
 
 import argparse
+import json
 import logging
 from pathlib import Path
 
@@ -126,6 +127,31 @@ def augment_from_keyword_scan_log(df: pd.DataFrame, keyword_log_csv: Path | None
     log_df = log_df.dropna(subset=["matched_row"])
     log_df["matched_row"] = log_df["matched_row"].astype(int)
 
+    # Ensure 1:1 join keys (some logs can contain duplicates).
+    log_df["keywords_found"] = log_df.get("keywords_found", "").fillna("").astype(str)
+    log_df["repo_link"] = log_df.get("repo_link", "").fillna("").astype(str)
+
+    def _union_semicolon(values: pd.Series) -> str:
+        tokens: set[str] = set()
+        for v in values.fillna("").astype(str):
+            for t in v.split(";"):
+                t = t.strip()
+                if t:
+                    tokens.add(t)
+        return ";".join(sorted(tokens))
+
+    def _first_nonempty(values: pd.Series) -> str:
+        for v in values.fillna("").astype(str):
+            s = v.strip()
+            if s and s.lower() not in {"none", "nan"}:
+                return s
+        return ""
+
+    log_df = (
+        log_df.groupby(["month", "matched_row"], as_index=False)
+        .agg({"keywords_found": _union_semicolon, "repo_link": _first_nonempty})
+    )
+
     df2 = df.merge(
         log_df[["month", "matched_row", "keywords_found", "repo_link"]],
         how="left",
@@ -218,6 +244,242 @@ def augment_from_sex_keyword_scan_log(df: pd.DataFrame, sex_keyword_log_csv: Pat
         df2["Sex-aware level"] = existing.where(existing.ne(""), incoming)
 
     return df2.drop(columns=["_FilenameNorm", "_MonthNorm"], errors="ignore")
+
+
+def _repo_root() -> Path:
+    return Path(__file__).resolve().parents[1]
+
+
+def default_dataset_json_path() -> Path:
+    # Repo layout: files/ad-reproducibility-audit (this repo) next to files/ad-dataset-catalogue
+    return _repo_root().parent / "ad-dataset-catalogue" / "data" / "neuroimaging_genetics.json"
+
+
+def _country_to_region(country: str) -> str:
+    c = (country or "").strip()
+    if not c:
+        return "Unknown"
+
+    europe = {
+        "UK", "Finland", "France", "Greece", "Italy", "Poland", "Spain", "Germany", "Netherlands", "Sweden",
+    }
+    americas = {"USA", "Canada", "Argentina", "Brazil", "Chile", "Colombia", "Mexico", "Peru"}
+    asia = {"Japan", "South Korea", "India"}
+    africa = {"Ghana", "Nigeria", "Uganda", "Tanzania"}
+    oceania = {"Australia"}
+
+    if c in europe:
+        return "Europe"
+    if c in americas:
+        return "Americas"
+    if c in asia:
+        return "Asia"
+    if c in africa:
+        return "Africa"
+    if c in oceania:
+        return "Oceania"
+    return "Other"
+
+
+def load_dataset_origin_regions(dataset_json: Path) -> dict[str, str]:
+    """Return mapping: dataset name -> origin region bucket."""
+    with open(dataset_json, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    mapping: dict[str, str] = {}
+    if not isinstance(data, list):
+        return mapping
+
+    for item in data:
+        if not isinstance(item, dict):
+            continue
+        name = item.get("name")
+        origins = item.get("origin")
+        if not isinstance(name, str) or not name.strip():
+            continue
+        if not isinstance(origins, list) or not origins:
+            mapping[name.strip()] = "Unknown"
+            continue
+        regions = {_country_to_region(str(c)) for c in origins if str(c).strip()}
+        regions.discard("Unknown")
+        mapping[name.strip()] = list(regions)[0] if len(regions) == 1 else "Multi-region"
+    return mapping
+
+
+def augment_from_dataset_scan_log(df: pd.DataFrame, dataset_log_csv: Path | None) -> pd.DataFrame:
+    """Merge Step 4b dataset scan log (month + matched_row) to fill dataset fields."""
+    if df.empty or not dataset_log_csv:
+        return df
+    dataset_log_csv = Path(dataset_log_csv)
+    if not dataset_log_csv.exists():
+        return df
+
+    log_df = pd.read_csv(dataset_log_csv)
+    cols = {c.lower(): c for c in log_df.columns}
+    needed = {"month", "matched_row", "datasets_found"}
+    if not needed.issubset(set(cols.keys())):
+        return df
+
+    log_df = log_df.rename(columns={
+        cols["month"]: "month",
+        cols["matched_row"]: "matched_row",
+        cols["datasets_found"]: "datasets_found",
+    })
+
+    log_df["month"] = log_df["month"].astype(str)
+    log_df["matched_row"] = pd.to_numeric(log_df["matched_row"], errors="coerce")
+    log_df = log_df.dropna(subset=["matched_row"])
+    log_df["matched_row"] = log_df["matched_row"].astype(int)
+    log_df["datasets_found"] = log_df["datasets_found"].fillna("").astype(str)
+
+    def _union_semicolon(values: pd.Series) -> str:
+        tokens: set[str] = set()
+        for v in values.fillna("").astype(str):
+            for t in v.split(";"):
+                t = t.strip()
+                if t:
+                    tokens.add(t)
+        return ";".join(sorted(tokens))
+
+    log_df = (
+        log_df.groupby(["month", "matched_row"], as_index=False)
+        .agg({"datasets_found": _union_semicolon})
+    )
+
+    df2 = df.merge(
+        log_df[["month", "matched_row", "datasets_found"]],
+        how="left",
+        left_on=["_Month", "_RowInSheet"],
+        right_on=["month", "matched_row"],
+    )
+
+    has_any = (
+        df2["datasets_found"].fillna("").astype(str).str.strip().ne("")
+        & df2["datasets_found"].fillna("").astype(str).str.strip().str.lower().ne("none")
+    )
+    if "Dataset(s) mentioned?" in df2.columns:
+        existing = df2["Dataset(s) mentioned?"].fillna("").astype(str).str.strip()
+        incoming = has_any.map(lambda b: "Yes" if b else "No")
+        df2["Dataset(s) mentioned?"] = existing.where(existing.ne(""), incoming)
+    if "Dataset names matched" in df2.columns:
+        existing = df2["Dataset names matched"].fillna("").astype(str).str.strip()
+        incoming = df2["datasets_found"].where(has_any, "")
+        df2["Dataset names matched"] = existing.where(existing.ne(""), incoming)
+
+    return df2
+
+
+def _split_semicolon_list(val: str) -> list[str]:
+    if val is None:
+        return []
+    s = str(val).strip()
+    if not s or s.lower() in {"none", "nan"}:
+        return []
+    parts = [p.strip() for p in s.split(";")]
+    return [p for p in parts if p]
+
+
+def fig_dataset_mentions(
+    df: pd.DataFrame,
+    year: int,
+    out_dir: Path,
+    dataset_json: Path | None,
+    denom: str,
+    out_name: str,
+    title: str,
+):
+    """Plot dataset mention rates.
+
+    denom:
+      - "all": denominator = all valid papers
+      - "matched": denominator = only valid papers with >=1 dataset mention
+    """
+    if "Dataset names matched" not in df.columns:
+        log.warning("Dataset columns not found — skipping dataset mention plots.")
+        return
+
+    valid = df[df.get("False Positive?", pd.Series(dtype=str)).str.lower() != "yes"].copy()
+    if len(valid) == 0:
+        return
+
+    series = valid["Dataset names matched"].fillna("").astype(str)
+    has_dataset = series.str.strip().ne("") & series.str.strip().str.lower().ne("none")
+
+    if denom == "matched":
+        valid = valid[has_dataset].copy()
+
+    denom_n = int(len(valid))
+    if denom_n == 0:
+        return
+
+    counts: dict[str, int] = {}
+    for v in valid["Dataset names matched"].dropna():
+        for name in _split_semicolon_list(v):
+            counts[name] = counts.get(name, 0) + 1
+
+    if not counts:
+        log.warning("No dataset mentions found — skipping dataset mention plots.")
+        return
+
+    origin_region: dict[str, str] = {}
+    if dataset_json:
+        dataset_json = Path(dataset_json)
+        if dataset_json.exists():
+            origin_region = load_dataset_origin_regions(dataset_json)
+        else:
+            log.warning(f"Dataset JSON not found: {dataset_json} — plotting without origin colors.")
+
+    rows = []
+    for name, n in counts.items():
+        pct = float(n) / float(denom_n) * 100
+        region = origin_region.get(name, "Unknown")
+        rows.append((name, n, pct, region))
+
+    rows.sort(key=lambda t: t[2], reverse=True)
+    labels = [r[0] for r in rows]
+    pcts = [round(r[2], 1) for r in rows]
+    regions = [r[3] for r in rows]
+
+    region_order = ["Americas", "Europe", "Asia", "Africa", "Oceania", "Multi-region", "Other", "Unknown"]
+    region_palette = {
+        "Americas": PURPLE,
+        "Europe": BLUE_DARK,
+        "Asia": PINK,
+        "Africa": "#0E7490",
+        "Oceania": "#065F46",
+        "Multi-region": "#A855F7",
+        "Other": GRAY,
+        "Unknown": GRAY,
+    }
+    colors = [region_palette.get(r, GRAY) for r in regions]
+
+    fig_h = max(6.0, 0.35 * len(labels) + 1.8)
+    fig, ax = plt.subplots(figsize=(11.5, fig_h))
+    y = np.arange(len(labels))
+    bars = ax.barh(y, pcts, color=colors, alpha=0.85, edgecolor=ACCENT, linewidth=0.5)
+    ax.set_yticks(list(y))
+    ax.set_yticklabels(labels, fontsize=9)
+    ax.invert_yaxis()
+    ax.set_xlabel("% of Papers")
+    ax.set_title(f"{title} ({year})")
+    ax.grid(axis="x", alpha=0.3)
+    ax.set_xlim(0, max(pcts + [5]) * 1.15)
+
+    for bar, v in zip(bars, pcts):
+        ax.text(bar.get_width() + 0.3, bar.get_y() + bar.get_height() / 2, f"{v:.1f}%", va="center", fontsize=9)
+
+    legend_items = []
+    for r in region_order:
+        if r in set(regions):
+            legend_items.append(mpatches.Patch(color=region_palette.get(r, GRAY), label=r))
+    if legend_items:
+        ax.legend(handles=legend_items, fontsize=9, loc="lower right", framealpha=0.25)
+
+    plt.tight_layout()
+    path = out_dir / out_name
+    plt.savefig(path, dpi=150, bbox_inches="tight")
+    plt.close()
+    log.info(f"  Saved: {path}")
 
 
 def _safe_yes_series(df: pd.DataFrame, col: str) -> pd.Series:
@@ -790,6 +1052,18 @@ def main():
         default=None,
         help="Optional author gender log CSV (default: alongside workbook if present)",
     )
+    parser.add_argument(
+        "--dataset-log-csv",
+        type=Path,
+        default=None,
+        help="Optional Step 4b dataset scan log CSV (default: alongside workbook if present)",
+    )
+    parser.add_argument(
+        "--dataset-json",
+        type=Path,
+        default=None,
+        help="Optional dataset catalogue JSON for origin coloring (default: ../ad-dataset-catalogue/data/neuroimaging_genetics.json)",
+    )
     args = parser.parse_args()
 
     out_dir = args.out_dir or (Path("plots") / str(args.year))
@@ -809,6 +1083,17 @@ def main():
         sex_keyword_log = candidate if candidate.exists() else None
     df = augment_from_sex_keyword_scan_log(df, sex_keyword_log)
 
+    dataset_log = args.dataset_log_csv
+    if dataset_log is None:
+        candidate = args.xlsx.parent / "dataset_scan_log.csv"
+        dataset_log = candidate if candidate.exists() else None
+    df = augment_from_dataset_scan_log(df, dataset_log)
+
+    dataset_json = args.dataset_json
+    if dataset_json is None:
+        candidate = default_dataset_json_path()
+        dataset_json = candidate if candidate.exists() else None
+
     author_gender_log = args.author_gender_log_csv
     if author_gender_log is None:
         candidate = args.xlsx.parent / "author_gender_log.csv"
@@ -826,6 +1111,25 @@ def main():
     fig_hosting_platforms(df, args.year, out_dir)
     fig_github_link_rate(df, args.year, out_dir)
     fig_author_gender_distribution(author_gender_log, args.year, out_dir)
+
+    fig_dataset_mentions(
+        df,
+        year=args.year,
+        out_dir=out_dir,
+        dataset_json=dataset_json,
+        denom="all",
+        out_name="fig12_dataset_proportions_all_papers.png",
+        title="Dataset Mentions (Denominator: All Papers)",
+    )
+    fig_dataset_mentions(
+        df,
+        year=args.year,
+        out_dir=out_dir,
+        dataset_json=dataset_json,
+        denom="matched",
+        out_name="fig13_dataset_proportions_dataset_found_papers.png",
+        title="Dataset Mentions (Denominator: Papers With ≥1 Dataset Mention)",
+    )
 
     log.info(f"\nAll figures saved to: {out_dir}")
     log.info("=== Step 8 complete ===")

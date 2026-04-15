@@ -127,6 +127,31 @@ def augment_from_keyword_scan_log(df: pd.DataFrame, keyword_log_csv: Path | None
     log_df = log_df.dropna(subset=["matched_row"])
     log_df["matched_row"] = log_df["matched_row"].astype(int)
 
+    # Ensure 1:1 join keys (some logs can contain duplicates).
+    log_df["keywords_found"] = log_df.get("keywords_found", "").fillna("").astype(str)
+    log_df["repo_link"] = log_df.get("repo_link", "").fillna("").astype(str)
+
+    def _union_semicolon(values: pd.Series) -> str:
+        tokens: set[str] = set()
+        for v in values.fillna("").astype(str):
+            for t in v.split(";"):
+                t = t.strip()
+                if t:
+                    tokens.add(t)
+        return ";".join(sorted(tokens))
+
+    def _first_nonempty(values: pd.Series) -> str:
+        for v in values.fillna("").astype(str):
+            s = v.strip()
+            if s and s.lower() not in {"none", "nan"}:
+                return s
+        return ""
+
+    log_df = (
+        log_df.groupby(["month", "matched_row"], as_index=False)
+        .agg({"keywords_found": _union_semicolon, "repo_link": _first_nonempty})
+    )
+
     df2 = df.merge(
         log_df[["month", "matched_row", "keywords_found", "repo_link"]],
         how="left",
