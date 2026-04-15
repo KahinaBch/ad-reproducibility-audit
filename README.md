@@ -31,6 +31,7 @@ Detailed workflow protocol: [`docs/REPRODUCIBILITY_PROTOCOL.md`](docs/REPRODUCIB
 | 2 | `src/sort_ad_pdfs_by_acceptance_and_build_workbook.py` | Sort PDFs by acceptance month, build Excel workbook |
 | 3 | `src/scan_keywords_update_workbook.py` | Scan PDFs for code-availability / reproducibility keywords (+ repo link) |
 | 4 | `src/scan_sex_keywords_update_workbook.py` | **NOVEL**: detect sex-specific analysis keywords |
+| 4b | `src/scan_dataset_mentions_update_workbook.py` | Detect mentions of known AD datasets (keyword search using dataset catalogue names) |
 | 5 | Manual curation | Validate keyword matches (False Positive?, Shared code?, Shared data?) |
 | 5b | `src/add_author_gender_from_doi.py` | Add first/last author + inferred gender (optional) |
 | 6 | `src/add_affiliation_country_from_pdfs.py` | Extract first-author country from PDFs |
@@ -45,6 +46,7 @@ All figures produced by Step 8 are percent/proportion based (not raw counts), an
 
 - Step 3 writes `workbooks/{year}/keyword_scan_log.csv` (includes `repo_link` and `matched_row`)
 - Step 4 writes `workbooks/{year}/sex_keyword_scan_log.csv`
+- Step 4b writes `workbooks/{year}/dataset_scan_log.csv`
 - Step 5b writes `workbooks/{year}/author_gender_log.csv`
 
 ---
@@ -107,6 +109,27 @@ python src/scan_sex_keywords_update_workbook.py \
 Outputs:
 - Updates workbook columns including `Sex-specific keywords?`, `Sex keywords matched`, `Sex-aware level`
 - Writes `workbooks/2023/sex_keyword_scan_log.csv`
+
+### Step 4b — Scan dataset mentions (keyword search)
+This step uses dataset names from the dataset catalogue JSON (`ad-dataset-catalogue/data/neuroimaging_genetics.json`, field: `name`) and scans PDF text for those names.
+
+```bash
+python src/scan_dataset_mentions_update_workbook.py \
+  --year-folder /path/to/your/2023_pdfs \
+  --xlsx workbooks/2023/AD-ReproducibleResearch_2023.xlsx
+```
+
+Optional (explicit JSON path):
+```bash
+python src/scan_dataset_mentions_update_workbook.py \
+  --year-folder /path/to/your/2023_pdfs \
+  --xlsx workbooks/2023/AD-ReproducibleResearch_2023.xlsx \
+  --dataset-json ../ad-dataset-catalogue/data/neuroimaging_genetics.json
+```
+
+Outputs:
+- Updates workbook columns: `Dataset(s) mentioned?`, `Dataset names matched`
+- Writes `workbooks/2023/dataset_scan_log.csv`
 
 ### Step 5 — Manual curation
 Open the workbook and manually verify:
@@ -177,6 +200,7 @@ workbooks/
     AD_{year}_analysis.xlsx               ← Statistical summary workbook
     keyword_scan_log.csv                  ← Step 3 log
     sex_keyword_scan_log.csv              ← Step 4 log
+    dataset_scan_log.csv                  ← Step 4b log
     author_gender_log.csv                 ← Step 5b log (optional)
     pdf_affiliation_country_log.csv       ← Step 6 log
 plots/

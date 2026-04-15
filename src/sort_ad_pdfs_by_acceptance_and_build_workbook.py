@@ -57,6 +57,8 @@ WORKBOOK_COLUMNS = [
     "First author affiliation country",
     "Sex-specific keywords?",
     "Sex keywords matched",
+    "Dataset(s) mentioned?",
+    "Dataset names matched",
     "Additional notes",
 ]
 
@@ -295,6 +297,7 @@ def build_workbook(month_buckets: dict, year: int, out_path: Path):
             "Shared data?": 13, "Language(s)": 15,
             "First author affiliation country": 20,
             "Sex-specific keywords?": 18, "Sex keywords matched": 30,
+            "Dataset(s) mentioned?": 18, "Dataset names matched": 35,
             "Additional notes": 40,
         }
         for col_idx, col_name in enumerate(WORKBOOK_COLUMNS, start=1):

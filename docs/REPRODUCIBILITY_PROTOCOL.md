@@ -8,6 +8,7 @@ This protocol defines the expected data organization, execution order, and quali
 - Analysis focus:
   - Open-science sharing indicators
   - Sex-specific analysis signals (AD-specific contribution)
+  - Dataset mention detection (catalogue-based keyword search)
   - First-author affiliation country
 - Optional / exploratory:
   - Author metadata + name-based gender inference (Step 5b)
@@ -72,6 +73,22 @@ Step 4 classification rules:
 - `sex-aware main focus`: sex/gender keyword match in the article title.
 - `sex-aware consideration`: sex/gender keyword match in body text (but not title).
 - Broad terms `sex`, `gender`, `woman`, `female` are checked in title only.
+
+### Step 4b — Dataset mention scan (catalogue-based)
+Script: `src/scan_dataset_mentions_update_workbook.py`
+
+- Input:
+  - year PDF folder
+  - workbook path
+  - dataset catalogue JSON path (default: sibling repo `ad-dataset-catalogue/data/neuroimaging_genetics.json`)
+- Output:
+  - Updated workbook columns:
+    - `Dataset(s) mentioned?`
+    - `Dataset names matched`
+  - `workbooks/{year}/dataset_scan_log.csv` (includes `datasets_found` and `matched_row`)
+
+Notes:
+- This is a keyword-search heuristic; manual validation is recommended.
 
 ### Step 5 — Manual curation
 
