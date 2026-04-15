@@ -1,5 +1,7 @@
 # PDFs not included due to copyright
 data/raw/*.pdf
+data/raw/pdfs/
+data/raw/pdfs/**
 **/January/*.pdf
 **/February/*.pdf
 **/March/*.pdf
@@ -30,3 +32,7 @@ Thumbs.db
 
 # Backup files
 *.backup.xlsx
+.~lock.*#
+
+# Web-downloaded PDFs
+data/raw/pdfs_web/

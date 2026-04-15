@@ -5,8 +5,9 @@ Step 3 of the AD Reproducibility Audit pipeline.
 
 Replicates the original MRM notebook's keyword-based screening logic:
 - PyPDF2-based page-by-page text extraction
-- Scans each PDF for open-science keywords
+- Scans each PDF for code-availability and reproducibility keywords
 - Updates the Excel workbook's "Keywords Matched" column
+- Adds/updates a "Code repository link" column with detected repository URL
 
 Adapted from: KahinaBch/mrm-reproducible-research-2025
 """
@@ -26,39 +27,32 @@ logging.basicConfig(
 )
 log = logging.getLogger(__name__)
 
-# ── Open-science keywords ────────────────────────────────────────────────────
-# Replicates the MRM notebook keyword set (Boudreau et al.)
-OPEN_SCIENCE_KEYWORDS = [
+# ── Code availability + reproducibility keywords ─────────────────────────────
+CODE_REPRO_KEYWORDS = [
+    "code available",
+    "code availability",
+    "source code",
     "open source",
     "open-source",
+    "open code",
+    "code sharing",
+    "supplementary code",
+    "reproducible",
+    "reproducibility",
+    "reproducible research",
+    "workflow",
+    "pipeline",
+    "script",
     "github",
     "gitlab",
     "bitbucket",
     "osf",
     "zenodo",
-    "dryad",
-    "figshare",
-    "jupyter",
-    "notebook",
-    "octave",
-    "matlab code",
-    "python code",
-    "r code",
-    "available online",
-    "publicly available",
-    "freely available",
-    "code available",
-    "data available",
-    "released",
-    "shared",
     "repository",
-    "open data",
-    "open code",
-    "data sharing",
-    "code sharing",
-    "supplementary code",
-    "supplementary data",
 ]
+
+URL_PATTERN = re.compile(r"https?://[^\s)\]>'\"]+", re.IGNORECASE)
+REPO_HOST_HINTS = ("github.com", "gitlab.com", "bitbucket.org", "osf.io", "zenodo.org")
 
 MONTHS = [
     "January", "February", "March", "April", "May", "June",
@@ -84,17 +78,36 @@ def extract_text_pypdf2(pdf_path: Path) -> list[str]:
 
 def scan_keywords(pages: list[str]) -> list[str]:
     """
-    Scan pages for open-science keywords.
+    Scan pages for code-availability and reproducibility keywords.
     Stops scanning pages once a keyword is found (replicates MRM notebook logic).
     Returns list of matched keywords.
     """
     matched = set()
-    for keyword in OPEN_SCIENCE_KEYWORDS:
+    for keyword in CODE_REPRO_KEYWORDS:
         for page_text in pages:
             if keyword.lower() in page_text.lower():
                 matched.add(keyword)
                 break  # Stop scanning pages for this keyword once found
     return sorted(matched)
+
+
+def extract_repository_link(pages: list[str]) -> str:
+    """Extract first repository-like URL, prioritizing common code-hosting domains."""
+    urls: list[str] = []
+    for page_text in pages:
+        if not page_text:
+            continue
+        urls.extend(URL_PATTERN.findall(page_text))
+
+    if not urls:
+        return ""
+
+    cleaned = [u.rstrip(".,;)") for u in urls]
+    for host in REPO_HOST_HINTS:
+        for url in cleaned:
+            if host in url.lower():
+                return url
+    return ""
 
 
 def match_pdf_to_row(pdf_name: str, ws_rows: list[dict]) -> int | None:
@@ -138,6 +151,11 @@ def process_month_folder(
         log.error("  Column 'Keywords Matched' not found in sheet.")
         return
 
+    repo_col = header.get("Code repository link")
+    if not repo_col:
+        repo_col = ws.max_column + 1
+        ws.cell(row=1, column=repo_col, value="Code repository link")
+
     # Build list of existing rows (for matching)
     existing_rows = []
     for row in ws.iter_rows(min_row=2, values_only=True):
@@ -150,6 +168,7 @@ def process_month_folder(
     for pdf in pdfs:
         pages = extract_text_pypdf2(pdf)
         keywords = scan_keywords(pages)
+        repo_link = extract_repository_link(pages)
 
         row_idx = match_pdf_to_row(pdf.name, existing_rows)
 
@@ -157,12 +176,14 @@ def process_month_folder(
             "pdf": pdf.name,
             "month": month_name,
             "keywords_found": "; ".join(keywords) if keywords else "none",
+            "repo_link": repo_link or "none",
             "matched_row": row_idx + 2 if row_idx is not None else "unmatched",
         }
         log_rows.append(log_entry)
 
         if row_idx is not None:
             ws.cell(row=row_idx + 2, column=kw_col, value="; ".join(keywords))
+            ws.cell(row=row_idx + 2, column=repo_col, value=repo_link)
         else:
             log.warning(f"    Could not match PDF to workbook row: {pdf.name}")
 
@@ -172,7 +193,7 @@ def process_month_folder(
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Scan A&D PDFs for open-science keywords and update workbook."
+        description="Scan A&D PDFs for code-availability/reproducibility keywords and update workbook."
     )
     parser.add_argument("--year-folder", type=Path, required=True,
                         help="Folder containing month subfolders with PDFs")
@@ -180,7 +201,7 @@ def main():
                         help="Path to the OSF-style Excel workbook")
     args = parser.parse_args()
 
-    log.info("=== Step 3: Keyword scan ===")
+    log.info("=== Step 3: Code availability keyword scan ===")
     log_rows = []
 
     for month in MONTHS:
@@ -194,7 +215,7 @@ def main():
     import csv
     log_path = args.xlsx.parent / "keyword_scan_log.csv"
     with open(log_path, "w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=["pdf", "month", "keywords_found", "matched_row"])
+        writer = csv.DictWriter(f, fieldnames=["pdf", "month", "keywords_found", "repo_link", "matched_row"])
         writer.writeheader()
         writer.writerows(log_rows)
 

@@ -24,6 +24,7 @@ from pathlib import Path
 from datetime import datetime
 
 import pdfminer.high_level
+import PyPDF2
 import openpyxl
 from openpyxl.styles import Font, PatternFill, Alignment
 
@@ -115,11 +116,83 @@ def extract_doi(text: str) -> str:
     return ""
 
 
-def extract_title(text: str) -> str:
-    """Heuristic: title is often in the first 500 chars, before abstract."""
-    snippet = text[:500]
-    lines = [l.strip() for l in snippet.splitlines() if len(l.strip()) > 20]
-    return lines[0] if lines else ""
+def extract_title_from_filename(filename: str) -> str:
+    """
+    Extract article title from filename pattern:
+      Journal - Year - Author - Title.pdf
+    """
+    stem = Path(filename).stem
+    parts = [p.strip() for p in re.split(r"\s-\s", stem) if p.strip()]
+    if len(parts) >= 4:
+        # Keep everything after the author block as title
+        return " - ".join(parts[3:]).strip()
+    return ""
+
+
+def extract_title_from_pdf_metadata(pdf_path: Path) -> str:
+    """Try extracting title from PDF metadata first."""
+    try:
+        with open(pdf_path, "rb") as f:
+            reader = PyPDF2.PdfReader(f)
+            raw = (reader.metadata.title or "").strip() if reader.metadata else ""
+            low = raw.lower()
+            if raw and low not in {"untitled", "title", "microsoft word"} and len(raw) >= 15:
+                return " ".join(raw.split())
+    except Exception:
+        pass
+    return ""
+
+
+def extract_title_from_text(text: str) -> str:
+    """Fallback heuristic title extraction from first-page text."""
+    blocked_prefixes = (
+        "received",
+        "accepted",
+        "revised",
+        "published",
+        "doi",
+        "copyright",
+        "open access",
+        "alzheimer",
+        "research article",
+        "review article",
+        "original article",
+        "volume",
+        "issue",
+    )
+    lines = [" ".join(l.strip().split()) for l in text.splitlines() if len(l.strip()) > 10]
+
+    # Prefer lines appearing before Abstract section (common journal layout)
+    abstract_idx = None
+    for i, line in enumerate(lines[:80]):
+        if line.lower() == "abstract" or line.lower().startswith("abstract"):
+            abstract_idx = i
+            break
+
+    search_lines = lines[: abstract_idx] if abstract_idx and abstract_idx > 0 else lines[:40]
+
+    for line in search_lines:
+        low = line.lower()
+        if low.startswith(blocked_prefixes):
+            continue
+        if "doi.org" in low or "http" in low:
+            continue
+        if len(line) < 30 or len(line) > 220:
+            continue
+        # Skip lines that look like author lists
+        if line.count(",") >= 3 and any(ch.isdigit() for ch in line) is False:
+            continue
+        return line
+    return ""
+
+
+def extract_title(pdf_path: Path, text: str) -> str:
+    """Extract title from PDF metadata/text; fallback to filename parsing."""
+    return (
+        extract_title_from_pdf_metadata(pdf_path)
+        or extract_title_from_text(text)
+        or extract_title_from_filename(pdf_path.name)
+    )
 
 
 def sort_pdfs(pdf_folder: Path, year: int) -> dict[int, list[dict]]:
@@ -137,7 +210,7 @@ def sort_pdfs(pdf_folder: Path, year: int) -> dict[int, list[dict]]:
         text = extract_text_first_pages(pdf, max_pages=3)
         date_str, month_num = parse_acceptance_date(text)
         doi = extract_doi(text)
-        title = extract_title(text)
+        title = extract_title(pdf, text)
 
         record = {
             "Filename": pdf.name,

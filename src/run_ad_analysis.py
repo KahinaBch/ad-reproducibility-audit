@@ -62,11 +62,108 @@ def load_workbook_to_df(xlsx_path: Path) -> pd.DataFrame:
         rows = data[1:]
         df = pd.DataFrame(rows, columns=header)
         df["_Month"] = month
+        # Excel sheet row numbers start at 1 and row 1 is the header.
+        # Data rows therefore begin at 2.
+        df["_RowInSheet"] = list(range(2, 2 + len(df)))
         frames.append(df)
     wb.close()
     if not frames:
         raise ValueError("No data found in workbook — run Steps 2–5 first.")
     return pd.concat(frames, ignore_index=True)
+
+
+def _safe_yes_series(df: pd.DataFrame, col: str) -> pd.Series:
+    """Return boolean Series for values that equal 'yes' (case-insensitive)."""
+    if col not in df.columns:
+        return pd.Series(False, index=df.index)
+    s = df[col].fillna("").astype(str).str.lower().str.strip()
+    return s.eq("yes")
+
+
+def _looks_like_repo_link(val: str) -> bool:
+    if not val:
+        return False
+    s = str(val).strip().lower()
+    if not s or s in {"none", "nan"}:
+        return False
+    return s.startswith("http") or "github.com" in s or "gitlab.com" in s or "osf.io" in s or "zenodo" in s
+
+
+def augment_from_keyword_scan_log(df: pd.DataFrame, keyword_log_csv: Path | None) -> pd.DataFrame:
+    """Merge Step 3 keyword scan log into workbook-derived df.
+
+    The log file is expected to have columns: month, matched_row, keywords_found, repo_link.
+    Join key: (month, matched_row) == (df._Month, df._RowInSheet)
+
+    We use it to fill missing 'Link' / 'Code repository link' and infer sharing flags.
+    """
+    if not keyword_log_csv:
+        return df
+    keyword_log_csv = Path(keyword_log_csv)
+    if not keyword_log_csv.exists():
+        return df
+
+    log_df = pd.read_csv(keyword_log_csv)
+    required = {"month", "matched_row", "keywords_found", "repo_link"}
+    if not required.issubset(set(c.lower() for c in log_df.columns)):
+        # Try case-sensitive fallback first
+        cols = set(log_df.columns)
+        if not required.issubset(cols):
+            return df
+
+    # Normalize column names
+    log_df = log_df.rename(columns={
+        "Month": "month",
+        "matched_row": "matched_row",
+        "Matched_Row": "matched_row",
+        "keywords_found": "keywords_found",
+        "Keywords_Found": "keywords_found",
+        "repo_link": "repo_link",
+        "Repo_Link": "repo_link",
+    })
+
+    log_df["month"] = log_df["month"].astype(str)
+    log_df["matched_row"] = pd.to_numeric(log_df["matched_row"], errors="coerce")
+    log_df = log_df.dropna(subset=["matched_row"])
+    log_df["matched_row"] = log_df["matched_row"].astype(int)
+
+    df2 = df.merge(
+        log_df[["month", "matched_row", "keywords_found", "repo_link"]],
+        how="left",
+        left_on=["_Month", "_RowInSheet"],
+        right_on=["month", "matched_row"],
+    )
+
+    # Fill link columns if present
+    repo_link = df2.get("repo_link", pd.Series("", index=df2.index)).fillna("")
+    if "Link" in df2.columns:
+        link_existing = df2["Link"].fillna("").astype(str).str.strip()
+        df2["Link"] = link_existing.where(link_existing.ne(""), repo_link)
+    if "Code repository link" in df2.columns:
+        repo_existing = df2["Code repository link"].fillna("").astype(str).str.strip()
+        df2["Code repository link"] = repo_existing.where(repo_existing.ne(""), repo_link)
+
+    # Infer sharing flags if missing/blank in workbook
+    code_indicators = {
+        "github", "gitlab", "repository", "repo", "script", "pipeline", "workflow", "open-source", "open source",
+        "code availability", "reproducible", "reproducibility",
+    }
+    data_indicators = {"zenodo", "dryad", "figshare", "osf", "dataverse", "open data", "dataset", "data availability"}
+
+    kw = df2.get("keywords_found", pd.Series("", index=df2.index)).fillna("").astype(str).str.lower()
+    kw_set = kw.apply(lambda v: {t.strip() for t in v.split(";") if t.strip()})
+
+    inferred_code = kw_set.apply(lambda s: any(t in s for t in code_indicators)) | repo_link.apply(_looks_like_repo_link)
+    inferred_data = kw_set.apply(lambda s: any(t in s for t in data_indicators))
+
+    if "Shared code?" in df2.columns:
+        existing = df2["Shared code?"].fillna("").astype(str).str.strip()
+        df2["Shared code?"] = existing.where(existing.ne(""), inferred_code.map(lambda b: "Yes" if b else ""))
+    if "Shared data?" in df2.columns:
+        existing = df2["Shared data?"].fillna("").astype(str).str.strip()
+        df2["Shared data?"] = existing.where(existing.ne(""), inferred_data.map(lambda b: "Yes" if b else ""))
+
+    return df2
 
 
 def classify_hosting(link_val: str) -> str:
@@ -103,8 +200,8 @@ def run_analysis(df: pd.DataFrame, year: int) -> dict:
     results["pct_keyword_match"] = round(100 * has_kw.mean(), 1)
 
     # ── Code and data sharing ────────────────────────────────────────────────
-    shared_code = df_valid["Shared code?"].str.lower().str.strip() == "yes"
-    shared_data = df_valid["Shared data?"].str.lower().str.strip() == "yes"
+    shared_code = _safe_yes_series(df_valid, "Shared code?")
+    shared_data = _safe_yes_series(df_valid, "Shared data?")
     shared_any = shared_code | shared_data
 
     results["n_shared_code"] = int(shared_code.sum())
@@ -115,7 +212,10 @@ def run_analysis(df: pd.DataFrame, year: int) -> dict:
     results["pct_shared_any"] = round(100 * shared_any.mean(), 1)
 
     # ── Hosting platform ─────────────────────────────────────────────────────
-    df_valid["_hosting"] = df_valid["Link"].apply(classify_hosting)
+    if "Link" in df_valid.columns:
+        df_valid["_hosting"] = df_valid["Link"].apply(classify_hosting)
+    else:
+        df_valid["_hosting"] = ""
     hosting_counts = df_valid[df_valid["_hosting"] != ""]["_hosting"].value_counts().to_dict()
     results["hosting_counts"] = hosting_counts
 
@@ -164,11 +264,17 @@ def run_analysis(df: pd.DataFrame, year: int) -> dict:
                 df_chisq["First author affiliation country"],
                 df_chisq["_shared"]
             )
-            chi2, p_val, dof, _ = stats.chi2_contingency(contingency)
-            n_total = contingency.values.sum()
-            cramers_v = (chi2 / (n_total * (min(contingency.shape) - 1))) ** 0.5
-            results["country_chisq"] = {"chi2": round(chi2, 3), "p": round(p_val, 4),
-                                         "dof": dof, "cramers_v": round(cramers_v, 3)}
+            if min(contingency.shape) > 1 and contingency.values.sum() > 0:
+                chi2, p_val, dof, _ = stats.chi2_contingency(contingency)
+                n_total = contingency.values.sum()
+                denom = n_total * (min(contingency.shape) - 1)
+                cramers_v = (chi2 / denom) ** 0.5 if denom else float("nan")
+                results["country_chisq"] = {
+                    "chi2": round(float(chi2), 3),
+                    "p": round(float(p_val), 4),
+                    "dof": int(dof),
+                    "cramers_v": round(float(cramers_v), 3) if cramers_v == cramers_v else "N/A",
+                }
 
     return results
 
@@ -248,12 +354,23 @@ def main():
     parser.add_argument("--xlsx", type=Path, required=True, help="Path to curated workbook")
     parser.add_argument("--year", type=int, required=True, help="Year analysed")
     parser.add_argument("--out", type=Path, default=None, help="Output Excel path")
+    parser.add_argument(
+        "--keyword-log-csv",
+        type=Path,
+        default=None,
+        help="Optional Step 3 keyword scan log (default: alongside workbook if present)",
+    )
     args = parser.parse_args()
 
     out_path = args.out or args.xlsx.with_name(f"AD_{args.year}_analysis.xlsx")
 
-    log.info("=== Step 6: Statistical Analysis ===")
+    log.info("=== Step 7: Statistical Analysis ===")
     df = load_workbook_to_df(args.xlsx)
+    keyword_log = args.keyword_log_csv
+    if keyword_log is None:
+        candidate = args.xlsx.parent / "keyword_scan_log.csv"
+        keyword_log = candidate if candidate.exists() else None
+    df = augment_from_keyword_scan_log(df, keyword_log)
     log.info(f"  Loaded {len(df)} rows from workbook.")
 
     results = run_analysis(df, args.year)
@@ -268,7 +385,7 @@ def main():
     log.info(f"{'='*50}\n")
 
     save_summary_excel(results, out_path, args.year)
-    log.info("=== Step 6 complete ===")
+    log.info("=== Step 7 complete ===")
 
 
 if __name__ == "__main__":

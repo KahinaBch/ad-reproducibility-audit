@@ -1,0 +1,914 @@
+month,row,doi,first_author,first_author_gender,last_author,last_author_gender,status
+January,2,10.1002/alz.70026,Charly Abi‐Ghanem,Male,Kristen L. Zuloaga,Female,ok
+January,3,10.1002/alz.14597,Sarah F. Ackley,Female,for the Alzheimer's Disease Neuroimaging Initiative,Unknown,ok
+January,4,10.1002/alz.14603,Maricedes Acosta‐Martínez,Unknown,Anat Biegon,Female,ok
+January,5,10.1002/alz.70032,Meysam Ahangaran,Unknown,Vijaya B. Kolachalama,Female,ok
+January,6,10.1002/alz.70007,Muge Akinci,Unknown,for the ALFA study,Unknown,ok
+January,7,10.1002/alz.14609,Federica Anastasi,Female,Marc Suárez‐Calvet,Male,ok
+January,8,10.1002/alz.14588,Gaia Bagnasco,Female,Bram Wouterse,Male,ok
+January,9,10.1002/alz.14616,Ping Bai,Androgynous,Changning Wang,Androgynous,ok
+January,10,10.1002/alz.14586,Laura D. Baker,Female,for the EXERT Study Group,Unknown,ok
+January,11,10.1002/alz.14622,Line Iden Berge,Female,Bettina Sandgate Husebo,Female,ok
+January,12,10.1002/alz.70053,Frauke Beyer,Female,Stéphanie Debette,Female,ok
+January,13,10.1002/alz.14599,Nárlon C. Boa Sorte Silva,Unknown,Teresa Liu‐Ambrose,Female,ok
+January,14,10.1002/alz.70013,Julia G. Burgdorf,Female,Jennifer L. Wolff,Female,ok
+January,15,10.1002/alz.14625,Felix Carbonell,Male,for the Alzheimer's Disease Neuroimaging Initiative,Unknown,ok
+January,16,10.1002/alz.70022,Xu‐Qiao Chen,Unknown,William C. Mobley,Male,ok
+January,17,10.1002/alz.14627,Minhyuk Choi,Unknown,Paola Gilsanz,Female,ok
+January,18,10.1002/alz.14583,Chenyin Chu,Unknown,Yijun Pan,Androgynous,ok
+January,19,10.1002/alz.70057,Chenyin Chu,Unknown,Yijun Pan,Androgynous,ok
+January,20,10.1002/alz.14626,Kyra M. Clarke,Female,Margaret E. Flanagan,Female,ok
+January,21,10.1002/alz.14615,Jacqueline J. Claus,Female,Frank J. Wolters,Male,ok
+January,22,10.1002/alz.14629,Petrice M. Cogswell,Unknown,Clifford R. Jack,Male,ok
+January,23,10.1002/alz.70014,Tim D'Aoust,Male,Stéphanie Debette,Female,ok
+January,24,10.1002/alz.14607,Line Damsgaard,Female,Janet Janbek,Female,ok
+January,25,10.1002/alz.14610,Anna Dittrich,Female,Silke Kern,Female,ok
+January,26,10.1002/alz.70060,Sarah E. Elzinga,Female,Eva L. Feldman,Female,ok
+January,27,10.1002/alz.14595,Yayan Feng,Unknown,Feixiong Cheng,Unknown,ok
+January,28,10.1002/alz.14575,Erin L. Ferguson,Female,M. Maria Glymour,Unknown,ok
+January,29,10.1002/alz.70030,Luana Fioriti,Female,Paul E. Fraser,Male,ok
+January,30,10.1002/alz.70001,Luciana Mascarenhas Fonseca,Female,Naomi S. Chaytor,Female,ok
+January,31,10.1002/alz.70018,Alma Ghirelli,Female,Jennifer L. Whitwell,Female,ok
+January,32,10.1002/alz.14623,Joshua D. Grill,Male,for the A4 Study Team,Unknown,ok
+January,33,10.1002/alz.14580,Muqi Guo,Unknown,Lindsay C. Kobayashi,Female,ok
+January,34,10.1002/alz.70023,Eugenio Gutiérrez‐Jiménez,Male,Leif Østergaard,Male,ok
+January,35,10.1002/alz.70011,Shimaa A. Heikal,Unknown,Mohamed Salama,Male,ok
+January,36,10.1002/alz.14594,Qili Hu,Androgynous,Jun Zhang,Male,ok
+January,37,10.1002/alz.14618,Chuyao Huang,Unknown,Wei Zhao,Androgynous,ok
+January,38,10.1002/alz.14590,Eli Iacob,Female,Caroline E. Stephens,Female,ok
+January,39,10.1002/alz.70064,Joseph Januszewicz,Male,Karen E. Schifferdecker,Female,ok
+January,40,10.1002/alz.14614,Natalie E. Johnson,Female,Niklaus D. Labhardt,Male,ok
+January,41,10.1002/alz.14600,Linda Karlsson,Female,Oskar Hansson,Male,ok
+January,42,10.1002/alz.14589,Matthias Klee,Male,Ana Quiñones,Female,ok
+January,43,10.1002/alz.14606,Kang Ko,Androgynous,for the KBASE Research Group,Unknown,ok
+January,44,10.1002/alz.70009,Haeok Lee,Female,Jonathan Ngoma,Male,ok
+January,45,10.1002/alz.70003,Douglas T. Leffa,Male,the Alzheimer's Disease Neuroimaging Initiative,Female,ok
+January,46,10.1002/alz.70021,Chun Li,Androgynous,Junliang Yuan,Androgynous,ok
+January,47,10.1002/alz.70024,Xin Li,Androgynous,Zheng Sun,Androgynous,ok
+January,48,10.1002/alz.14596,Minglei Liu,Androgynous,Jing Yang,Androgynous,ok
+January,49,10.1002/alz.70036,Shu Liu,Androgynous,"for the Alzheimer's Disease Neuroimaging Initiative, and the Australian Imaging Biomarkers and Lifestyle Flagship Study of Ageing",Unknown,ok
+January,50,10.1002/alz.14608,Xulin Liu,Unknown,the ALLFTD Consortium and the GENFI Consortium,Female,ok
+January,51,10.1002/alz.70028,Raele Donetha Loy,Unknown,Amy Kind,Female,ok
+January,52,10.1002/alz.14602,Liwei Ma,Androgynous,Yijun Pan,Androgynous,ok
+January,53,10.1002/alz.70017,Clayton Mansel,Male,Olivia J. Veatch,Female,ok
+January,54,10.1002/alz.14591,Manuel Menendez‐Gonzalez,Male,Manuel Menendez‐Gonzalez,Male,ok
+January,55,10.1002/alz.70047,Cassidy P. Molinare,Female,Roos J. Jutten,Female,ok
+January,56,10.1002/alz.70006,Cyprian M. Mostert,Male,Zul Merali,Unknown,ok
+January,57,10.1002/alz.70031,Sofia Moura,Female,Jeffery M. Vance,Male,ok
+January,58,10.1002/alz.70010,Ryan T. Muir,Male,Eric E. Smith,Male,ok
+January,59,10.1002/alz.70015,Chandra Muller,Male,John Robert Warren,Male,ok
+January,60,10.1002/alz.70029,Audrey R. Murchland,Female,Karestan C. Koenen,Unknown,ok
+January,61,10.1002/alz.14585,Ashima Nayyar,Female,William T. Hu,Male,ok
+January,62,10.1002/alz.14628,Daisuke Ono,Male,Dennis W. Dickson,Male,ok
+January,63,10.1002/alz.14556,Alessandro Padovani,Male,Andrea Pilotto,Female,ok
+January,64,10.1002/alz.70005,Feng‐Feng Pan,Unknown,Qi‐Hao Guo,Unknown,ok
+January,65,10.1002/alz.14551,Keshet Pardo,Unknown,Amir Glik,Male,ok
+January,66,10.1002/alz.14619,Kelsey R. Sewell,Female,Kirk I. Erickson,Male,ok
+January,67,10.1002/alz.70039,Jacob S. Shaw,Male,Matthew E. Peters,Male,ok
+January,68,10.1002/alz.14593,Qin Shi,Androgynous,Jiayi Zhang,Androgynous,ok
+January,69,10.1002/alz.14613,Srishti Shrestha,Unknown,Honglei Chen,Androgynous,ok
+January,70,10.1002/alz.70012,E. Keats Shwab,Unknown,Ornit Chiba‐Falek,Unknown,ok
+January,71,10.1002/alz.14601,Ming Ann Sim,Androgynous,Christopher L. H. Chen,Male,ok
+January,72,10.1002/alz.14577,Ming Ann Sim,Androgynous,Christopher L. H. Chen,Male,ok
+January,73,10.1002/alz.70119,Elisa Nicoloso Simões‐Pires,Female,Erin H. Norris,Female,ok
+January,74,10.1002/alz.14579,Dylan J. Terstege,Male,Derya Sargin,Female,ok
+January,75,10.1002/alz.70033,Garth J. Thompson,Male,Garth J. Thompson,Male,ok
+January,76,10.1002/alz.14612,Qu Tian,Androgynous,Luigi Ferrucci,Male,ok
+January,77,10.1002/alz.70016,Adrià Tort‐Merino,Unknown,Raquel Sánchez‐Valle,Female,ok
+January,78,10.1002/alz.70038,Jun Wang,Male,for the Translational Biomarker Research of AgIng and Neurodegeneration (TBRAIN),Unknown,ok
+January,79,10.1002/alz.70004,Yan Wang,Male,Fang Xie,Androgynous,ok
+January,80,10.1002/alz.14587,Guoqiao Wang,Androgynous,Randall J. Bateman,Male,ok
+January,81,10.1002/alz.70002,Yu‐Jung Jenny Wei,Unknown,Steven T. DeKosky,Male,ok
+January,82,10.1002/alz.14592,Julian Daniel Sunday Willett,Male,Dmitry Prokopenko,Male,ok
+January,83,10.1002/alz.14582,Laura E. M. Wisse,Female,Renaud La Joie,Male,ok
+January,84,10.1002/alz.14584,Kyung Ah Woo,Female,Jee‐Young Lee,Unknown,ok
+January,85,10.1002/alz.14624,Jingtao Wu,Androgynous,Yuxia Ma,Androgynous,ok
+January,86,10.1002/alz.14611,Rong Xu,Androgynous,Rong Xu,Androgynous,ok
+January,87,10.1002/alz.14605,Kaifang Yao,Unknown,Yi Guo,Androgynous,ok
+January,88,10.1002/alz.70075,Kyan Younes,Unknown,Elizabeth C. Mormino,Female,ok
+January,89,10.1002/alz.14578,Sedigheh Zabihi,Female,Charles R Marshall,Male,ok
+February,2,10.1002/alz.70056,,Unknown,,Unknown,no_author_metadata
+February,3,10.1002/alz.70041,Eloise Berson,Female,Carol A. Shively,Female,ok
+February,4,10.1002/alz.70103,Yuan Cao,Androgynous,Yi‐Cheng Zhu,Unknown,ok
+February,5,10.1002/alz.70122,Jasper Carlsen,Male,Johan Palmfeldt,Male,ok
+February,6,10.1002/alz.70124,Ajay Castelino,Male,Felicity Anne Baker,Female,ok
+February,7,10.1002/alz.70096,Chun‐Lin Chen,Unknown,Le Shi,Female,ok
+February,8,10.1002/alz.70089,Guanqun Chen,Androgynous,Qi Yang,Androgynous,ok
+February,9,10.1002/alz.70046,Xu‐Qiao Chen,Unknown,William C. Mobley,Male,ok
+February,10,10.1002/alz.70051,Almudena Chicote‐González,Female,Cristina Malagelada,Female,ok
+February,11,10.1002/alz.70045,Viswanath Devanarayan,Unknown,Shobha Dhadda,Female,ok
+February,12,10.1002/alz.70055,Huitong Ding,Unknown,Honghuang Lin,Unknown,ok
+February,13,10.1002/alz.70116,Robert Durcan,Male,Maura Malpetti,Female,ok
+February,14,10.1002/alz.70087,Alexander J. Ehrenberg,Male,Lea T. Grinberg,Female,ok
+February,15,10.1002/alz.70081,Francesca Eroli,Female,Silvia Maioli,Female,ok
+February,16,10.1002/alz.70086,Emre Fertan,Male,David Klenerman,Male,ok
+February,17,10.1002/alz.70104,Scott R. French,Male,Craig C. Weinkauf,Male,ok
+February,18,10.1002/alz.70091,Yang Gao,Androgynous,Lars O. Tjernberg,Male,ok
+February,19,10.1002/alz.70070,Jesús Garcia Castro,Male,for the ALLFTD Consortium,Unknown,ok
+February,20,10.1002/alz.70097,Brandon E. Gavett,Male,Oanh L. Meyer,Female,ok
+February,21,10.1002/alz.70115,Sapir Golan Shekhtman,Unknown,Orit H. Lesman‐Segev,Female,ok
+February,22,10.1002/alz.70077,Roberto Guzmán‐Hernández,Male,Silvia Fossati,Female,ok
+February,23,10.1002/alz.70065,Htet Lin Htun,Unknown,Rosanne Freak‐Poli,Female,ok
+February,24,10.1002/alz.70071,Phoebe Ivain,Female,André Strydom,Male,ok
+February,25,10.1002/alz.70152,Daniela Jaime Garcia,Female,The MSS3 Study Group,Female,ok
+February,26,10.1002/alz.70067,Seyeon Jang,Unknown,Jie Chen,Androgynous,ok
+February,27,10.1002/alz.70109,Seokho Jeong,Unknown,Dokyoon Kim,Unknown,ok
+February,28,10.1002/alz.70105,Farooq Kamal,Male,Mahsa Dadar,Female,ok
+February,29,10.1002/alz.70072,Selin Karakose,Female,Antonio Terracciano,Male,ok
+February,30,10.1002/alz.70093,Valentina Lacovich,Female,Gorazd Bernard Stokin,Male,ok
+February,31,10.1002/alz.70073,Huan Lan,Androgynous,Qiyong Gong,Androgynous,ok
+February,32,10.1002/alz.70043,Jillian K. Lee,Female,Michelle M. Mielke,Female,ok
+February,33,10.1002/alz.70098,Li Liang,Androgynous,Ting Ma,Androgynous,ok
+February,34,10.1002/alz.70099,Wang Liao,Androgynous,Kai‐Christian Sonntag,Unknown,ok
+February,35,10.1002/alz.70120,Emma E. Lietzke,Female,Kayla G. Sprenger,Female,ok
+February,36,10.1002/alz.70130,Anna Lorenz,Female,Derek B. Archer,Male,ok
+February,37,10.1002/alz.70101,Nicole M. Maphis,Female,Kiran Bhaskar,Female,ok
+February,38,10.1002/alz.70102,Donovan T. Maust,Male,Joanne Spetz,Female,ok
+February,39,10.1002/alz.70063,Miharu Nakanishi,Female,Atsushi Nishida,Male,ok
+February,40,10.1002/alz.70066,Habbiburr Rehman,Unknown,for the Alzheimer's Disease Neuroimaging Initiative,Unknown,ok
+February,41,10.1002/alz.70050,Paolo Reho,Male,Haotian Wu,Unknown,ok
+February,42,10.1002/alz.70090,Longbing Ren,Unknown,Yao Yao,Androgynous,ok
+February,43,10.1002/alz.70088,Emily Rogalski,Female,Angela Roberts,Female,ok
+February,44,10.1002/alz.70095,Apoorva Safai,Unknown,Pallavi Tiwari,Female,ok
+February,45,10.1002/alz.70074,Jennifer B. Seaman,Female,Dianxu Ren,Unknown,ok
+February,46,10.1002/alz.70080,Dai Shi,Androgynous,for the Alzheimer's Disease Neuroimaging Initiative,Unknown,ok
+February,47,10.1002/alz.70042,Saowaluk Srikajornlarp,Unknown,Tanchanok Chattaris,Unknown,ok
+February,48,10.1002/alz.70092,Justin Torok,Male,Ashish Raj,Male,ok
+February,49,10.1002/alz.70061,Vaibhav Tripathi,Unknown,Yakeel T. Quiroz,Unknown,ok
+February,50,10.1002/alz.70040,Olivia Wagemann,Female,Johannes Levin,Male,ok
+February,51,10.1002/alz.70062,Hong Wang,Androgynous,John R. Sims,Male,ok
+February,52,10.1002/alz.70112,Ni Wang,Androgynous,Takahisa Kanekiyo,Male,ok
+February,53,10.1002/alz.70114,Min Wei,Androgynous,for the Alzheimer's Disease Neuroimaging Initiative,Unknown,ok
+February,54,10.1002/alz.70044,Jiajie Xu,Androgynous,Xin Cheng,Androgynous,ok
+February,55,10.1002/alz.70084,Pravin Yeapuri,Unknown,Rodney Lee Mosley,Male,ok
+February,56,10.1002/alz.70111,Shuang Yuan,Androgynous,Dongmei Lai,Androgynous,ok
+February,57,10.1002/alz.70049,Zhiyi Zhang,Androgynous,Zhiyi Zhang,Androgynous,ok
+February,58,10.1002/alz.70094,Haotian Zou,Unknown,Sheng Luo,Androgynous,ok
+March,2,10.1002/alz.70126,Marco Aiello,Male,Michela Pievani,Female,ok
+March,3,10.1002/alz.70192,Takashi Asada,Male,Akira Tamaoka,Male,ok
+March,4,10.1002/alz.70192,Takashi Asada,Male,Akira Tamaoka,Male,ok
+March,5,10.1002/alz.70169,Sarah Assaad,Female,Andrew Steptoe,Male,ok
+March,6,10.1002/alz.70138,Sandra Barral,Female,Giuseppe Tosto,Male,ok
+March,7,10.1002/alz.70211,Ashlyn Barry,Female,the Alzheimer Biomarker Consortium ‐ Down syndrome,Female,ok
+March,8,10.1002/alz.70209,Bruna Bellaver,Female,Tharick A. Pascoal,Unknown,ok
+March,9,10.1002/alz.70200,Joya Bhattacharyya,Unknown,Melinda C. Power,Female,ok
+March,10,10.1002/alz.70163,Niels Juul Brogaard,Male,Dominic Trepel,Male,ok
+March,11,10.1002/alz.70132,Taya A. Collyer,Female,Velandai K. Srikanth,Unknown,ok
+March,12,10.1002/alz.70125,Patricia F. Coogan,Female,Lynn Rosenberg,Female,ok
+March,13,10.1002/alz.70224,Jeffrey Cummings,Male,Samantha Budd Haeberlein,Female,ok
+March,14,10.1002/alz.70127,Jannis Denecke,Male,Michael Ewers,Male,ok
+March,15,10.1002/alz.70220,David Mawutor Donkor,Male,David Larbi Simpong,Male,ok
+March,16,10.1002/alz.70167,Marcus D. Gay,Male,Michael S. Rafii,Male,ok
+March,17,10.1002/alz.70162,Haşim Gezegen,Male,Bedia Samanci,Female,ok
+March,18,10.1002/alz.70157,Marissa A. Gogniat,Female,Angela L. Jefferson,Female,ok
+March,19,10.1002/alz.70148,Leslie Grasset,Female,Carole Dufouil,Female,ok
+March,20,10.1002/alz.70144,Joshua D. Grill,Male,Van Ta Park,Male,ok
+March,21,10.1002/alz.70144,Joshua D. Grill,Male,Van Ta Park,Male,ok
+March,22,10.1002/alz.70203,Rui Gu,Male,Yan Liu,Male,ok
+March,23,10.1002/alz.70215,Jun He,Male,Renato Polimanti,Male,ok
+March,24,10.1002/alz.70153,Seyed Hani Hojjati,Male,Qolamreza R. Razlighi,Unknown,ok
+March,25,10.1002/alz.70198,Xu Hou,Androgynous,Wolfdieter Springer,Male,ok
+March,26,10.1002/alz.70139,Jinshil Hyun,Unknown,Carol A. Derby,Female,ok
+March,27,10.1002/alz.70194,Shan‐Xue Jin,Unknown,Dennis J. Selkoe,Male,ok
+March,28,10.1002/alz.70174,Elizabeth Joe,Female,Amytis Towfighi,Unknown,ok
+March,29,10.1002/alz.70205,Erin M. Jonaitis,Female,Rebecca E. Langhough,Female,ok
+March,30,10.1002/alz.70172,Przemysław R. Kac,Male,Kaj Blennow,Male,ok
+March,31,10.1002/alz.70199,George K. Karway,Male,Brad A. Racette,Male,ok
+March,32,10.1002/alz.70190,Krystal R. Kittle,Female,Joel G. Anderson,Male,ok
+March,33,10.1002/alz.70176,William S. Kremen,Male,Matthew S. Panizzon,Male,ok
+March,34,10.1002/alz.70143,Sayantan Kumar,Unknown,for the Alzheimer's Disease Neuroimaging Initiative,Unknown,ok
+March,35,10.1002/alz.70195,Shin Kurose,Androgynous,Keisuke Takahata,Male,ok
+March,36,10.1002/alz.70188,Nik M. Lampe,Male,Tara McKay,Female,ok
+March,37,10.1002/alz.70242,Oceanna Yueran Li,Unknown,for the Alzheimer's Disease Neuroimaging Initiative,Unknown,ok
+March,38,10.1002/alz.70177,Tengfei Lin,Androgynous,Jinling Tang,Androgynous,ok
+March,39,10.1002/alz.70182,Yun Lin,Androgynous,Yi Guo,Androgynous,ok
+March,40,10.1002/alz.70193,Wenying Liu,Androgynous,Jianping Jia,Androgynous,ok
+March,41,10.1002/alz.70170,Ying Luan,Androgynous,for the Alzheimer's Disease Neuroimaging Initiative (ADNI),Unknown,ok
+March,42,10.1002/alz.70180,Joseph Magagnoli,Male,Jayakrishna Ambati,Unknown,ok
+March,43,10.1002/alz.70187,Nahuel Magrath Guimet,Unknown,Pablo Miguel Bagnati,Male,ok
+March,44,10.1002/alz.70145,Mahmoud B. Maina,Male,Celeste M. Karch,Female,ok
+March,45,10.1002/alz.70217,Jennifer R. Mammen,Female,Yuge Xiao,Androgynous,ok
+March,46,10.1002/alz.70164,Marina Daniela Manescu,Female,Daniel Pirici,Male,ok
+March,47,10.1002/alz.70129,Natalie L. Marchant,Female,Anna L. Cox,Female,ok
+March,48,10.1002/alz.70131,Joseph McKinley,Male,Christopher Beetle,Male,ok
+March,49,10.1002/alz.70141,Max McLachlan,Male,ABC‐DS Investigators,Unknown,ok
+March,50,10.1002/alz.70206,Zhen Mei,Androgynous,Thomas S. Wingo,Male,ok
+March,51,10.1002/alz.70214,Erika Meza,Female,Hector M. González,Male,ok
+March,52,10.1002/alz.70175,Anthony Chidubem Mmadumbu,Male,Sultan Noman Qasem,Male,ok
+March,53,10.1002/alz.70133,Lennart H. van der Molen,Male,Edo Richard,Male,ok
+March,54,10.1002/alz.70185,Sophie Mutel,Female,Federica Ribaldi,Female,ok
+March,55,10.1002/alz.70155,Yoshinori Nishimoto,Male,Yasumichi Arai,Unknown,ok
+March,56,10.1002/alz.70146,Patrick Oeckl,Male,the Dominantly Inherited Alzheimer Network,Female,ok
+March,57,10.1002/alz.70223,Ademola Adetokunbo Oyagbemi,Unknown,Momoh Audu Yakubu,Unknown,ok
+March,58,10.1002/alz.70128,Jinqian Pan,Unknown,Jie Xu,Androgynous,ok
+March,59,10.1002/alz.70216,Kathryn V. Papp,Female,the US POINTER Study Group,Female,ok
+March,60,10.1002/alz.70156,James Russell Pike,Male,ACHIEVE Collaborative Research Group,Unknown,ok
+March,61,10.1002/alz.70171,Ilaria Pola,Female,Andréa L. Benedet,Female,ok
+March,62,10.1002/alz.70166,Ramiro Eduardo Rea Reyes,Male,Sterling C. Johnson,Male,ok
+March,63,10.1002/alz.70201,Joanne Rodda,Female,Ashvini Keshavan,Unknown,ok
+March,64,10.1002/alz.70134,Jason K. Russell,Male,Paul A. Newhouse,Male,ok
+March,65,10.1002/alz.70179,Arash Salardini,Male,Sudha Seshadri,Female,ok
+March,66,10.1002/alz.70191,Jessica Samuelsson,Female,Ingmar Skoog,Male,ok
+March,67,10.1002/alz.70241,Mathias Sauer,Male,Johanna Nilsson,Female,ok
+March,68,10.1002/alz.70213,Zsuzsa Sárkány,Female,Pedro M. Martins,Male,ok
+March,69,10.1002/alz.70140,Jetske van der Schaar,Female,Leonie N. C. Visser,Female,ok
+March,70,10.1002/alz.70183,Matthew Settimi,Male,Mark I. Boulos,Male,ok
+March,71,10.1002/alz.70118,Aladdin H. Shadyab,Male,for the ADCS EXERT Study Group,Unknown,ok
+March,72,10.1002/alz.70161,Huilin Tang,Androgynous,Jingchuan Guo,Unknown,ok
+March,73,10.1002/alz.70142,Yuto Uchida,Unknown,Kenichi Oishi,Male,ok
+March,74,10.1002/alz.70137,Natalia Valle‐Tamayo,Female,M. Florencia Iulita,Unknown,ok
+March,75,10.1002/alz.70196,Youjie Wang,Unknown,Bo Wu,Male,ok
+March,76,10.1002/alz.70136,Chenrui Wu,Androgynous,Rongcai Jiang,Unknown,ok
+March,77,10.1002/alz.70160,Vanessa M. Young,Female,Sudha Seshadri,Female,ok
+March,78,10.1002/alz.70159,Afsara B. Zaheed,Unknown,Meredith L. Wallace,Female,ok
+March,79,10.1002/alz.70135,Yajing Zhou,Androgynous,Andre Strydom,Male,ok
+March,80,10.1002/alz.70197,Rafaela Gomes dos Reis,Female,Leda Leme Talib,Female,ok
+April,2,10.1002/alz.70304,Maison Abu Raya,Unknown,Gil D. Rabinovici,Male,ok
+April,3,10.1002/alz.70276,Hailey A. Adegboye,Female,Angela L. Jefferson,Female,ok
+April,4,10.1002/alz.70266,Marco Angrisani,Male,Jinkook Lee,Unknown,ok
+April,5,10.1002/alz.70282,Cheng Bi,Androgynous,Bairong Shen,Unknown,ok
+April,6,10.1002/alz.70346,Christopher A. Brown,Male,David A. Wolk,Male,ok
+April,7,10.1002/alz.70230,Jinghan Jenny Chen,Androgynous,Krista L. Lanctôt,Female,ok
+April,8,10.1002/alz.70306,Joshua Chodosh,Male,Soo Borson,Androgynous,ok
+April,9,10.1002/alz.70270,Jiayue Chu,Unknown,Hongjiang Wei,Androgynous,ok
+April,10,10.1002/alz.70267,Lingzhi Chu,Androgynous,Olivia E. Atherton,Female,ok
+April,11,10.1002/alz.70232,Daniel O. Clark,Male,Frederick W. Unverzagt,Male,ok
+April,12,10.1002/alz.70297,Julianne G. Clina,Female,Lauren T. Ptomey,Female,ok
+April,13,10.1002/alz.70253,Liang Cui,Androgynous,Qi‐Hao Guo,Unknown,ok
+April,14,10.1002/alz.70321,Alexandra H. DiFilippo,Female,Bradley T. Christian,Male,ok
+April,15,10.1002/alz.70268,Karen Eggleston,Female,Daejung Kim,Unknown,ok
+April,16,10.1002/alz.70288,Gilda E. Ennis,Female,Carey E. Gleason,Androgynous,ok
+April,17,10.1002/alz.70225,Francesca R. Farina,Female,James W. Griffith,Male,ok
+April,18,10.1002/alz.70284,Bárbara Fernandes Gomes,Female,David Bäckström,Male,ok
+April,19,10.1002/alz.70262,Marta Fructuoso,Female,Marie‐Claude Potier,Unknown,ok
+April,20,10.1002/alz.70394,Jürgen Germann,Male,for the Alzheimer's Disease Neuroimaging Initiative,Unknown,ok
+April,21,10.1002/alz.70245,Valentina Ghisays,Female,Eric M. Reiman,Male,ok
+April,22,10.1002/alz.70400,Sandra Giménez,Female,Juan Fortea,Male,ok
+April,23,10.1002/alz.70301,Hector M. González,Male,Wassim Tarraf,Male,ok
+April,24,10.1002/alz.70285,Shannon Halloway,Female,Lisa L. Barnes,Female,ok
+April,25,10.1002/alz.70294,Benjamin L. Handen,Male,the Alzheimer's Biomarker Consortium – Down Syndrome (ABC‐DS),Female,ok
+April,26,10.1002/alz.70274,Naomi Hannaway,Female,Rimona S. Weil,Unknown,ok
+April,27,10.1002/alz.70240,Olivia Horn,Female,Stephanie Aghamoosa,Female,ok
+April,28,10.1002/alz.70314,Yiying Hu,Androgynous,Weidong Le,Androgynous,ok
+April,29,10.1002/alz.70318,Anke Hüls,Female,Thomas S. Wingo,Male,ok
+April,30,10.1002/alz.70238,Nur Jury‐Garfe,Female,Cristian A. Lasagna‐Reeves,Male,ok
+April,31,10.1002/alz.70252,Amir H. Kashani,Male,Frank C. T. van der Heide,Male,ok
+April,32,10.1002/alz.70271,Sujin Kim,Female,Jaeeon Yoo,Unknown,ok
+April,33,10.1002/alz.70315,Daniel Kjaergaard,Male,Anja Hviid Simonsen,Female,ok
+April,34,10.1002/alz.70246,Claire Lancaster,Female,Chris M. Bird,Male,ok
+April,35,10.1002/alz.70244,Axel A. S. Laurell,Male,the PREVENT Dementia Investigators,Female,ok
+April,36,10.1002/alz.70311,Haeok Lee,Female,The Asian Cohort for Alzheimer's Disease Study,Female,ok
+April,37,10.1002/alz.70237,Yuk Yee Leung,Unknown,Li‐San Wang,Unknown,ok
+April,38,10.1002/alz.70260,Haibin Li,Androgynous,Wuxiang Xie,Unknown,ok
+April,39,10.1002/alz.70280,Dillys Xiaodi Liu,Unknown,Kristine Yaffe,Female,ok
+April,40,10.1002/alz.70243,Haiyan Liu,Androgynous,For DIAN study team,Unknown,ok
+April,41,10.1002/alz.70283,Jorge J. Llibre‐Guerra,Male,Juan J. Llibre‐Rodríguez,Male,ok
+April,42,10.1002/alz.70317,Dona E. C. Locke,Female,Richard J. Caselli,Male,ok
+April,43,10.1002/alz.70347,Austin McCullough,Male,for the DIAN‐TU Study Team,Unknown,ok
+April,44,10.1002/alz.70249,Simona Merlini,Female,Francesca Vitali,Female,ok
+April,45,10.1002/alz.70231,Evan J. Messenger,Male,Stephanie J. Bissel,Female,ok
+April,46,10.1002/alz.70228,Jamie Mitchell,Female,Lajos Csincsik,Male,ok
+April,47,10.1002/alz.70286,Brianna Morgan,Female,Nancy Hodgson,Female,ok
+April,48,10.1002/alz.70292,Nanda K. Navalpur Shanmugam,Female,Rudolph E. Tanzi,Male,ok
+April,49,10.1002/alz.70281,Yee To Ng,Androgynous,Kira Birditt,Female,ok
+April,50,10.1002/alz.70290,Oluwagbemiga Oyinlola,Unknown,Lawrence Adekunle Adebusoye,Male,ok
+April,51,10.1002/alz.70229,Jacqueline A. Palmer,Female,Sandra A. Billinger,Female,ok
+April,52,10.1002/alz.70316,Yoav D. Piura,Male,Gregory S. Day,Male,ok
+April,53,10.1002/alz.70248,Tanav Popli,Unknown,Amanda Cook Maher,Female,ok
+April,54,10.1002/alz.70263,Yao Qin,Androgynous,Hongmei Yu,Androgynous,ok
+April,55,10.1002/alz.70293,Stephen Salloway,Male,John R. Sims,Male,ok
+April,56,10.1002/alz.70257,Mouna J. Sawan,Female,Danijela Gnjidic,Female,ok
+April,57,10.1002/alz.70296,Beatriz Sánchez‐Moreno,Female,Bryan A. Strange,Male,ok
+April,58,10.1002/alz.70247,Omer Sharon,Male,Yuval Nir,Male,ok
+April,59,10.1002/alz.70435,Ellen Hanna Singleton,Female,Oskar Hansson,Male,ok
+April,60,10.1002/alz.70307,Laura del Hoyo Soriano,Female,Juan Fortea,Male,ok
+April,61,10.1002/alz.70227,Reijo Sund,Male,for Alzheimer's Disease Neuroimaging Initiative,Unknown,ok
+April,62,10.1002/alz.70261,Toshiko Tanaka,Female,Luigi Ferrucci,Male,ok
+April,63,10.1002/alz.70313,Huilin Tang,Androgynous,Jingchuan Guo,Unknown,ok
+April,64,10.1002/alz.70305,Jessica M. Thanos,Female,John R. Lukens,Male,ok
+April,65,10.1002/alz.70303,Xunyao Tian,Unknown,Chengxuan Qiu,Unknown,ok
+April,66,10.1002/alz.70310,Mario Torso,Male,Gerard R. Ridgway,Male,ok
+April,67,10.1002/alz.70265,Jasmine Travers Altizer,Female,Andreina Jimenez,Female,ok
+April,68,10.1002/alz.70329,Selina M. Vattathil,Female,Aliza P. Wingo,Female,ok
+April,69,10.1002/alz.70254,Lissa Ventura‐Antunes,Female,Matthew Schrag,Male,ok
+April,70,10.1002/alz.70277,Hui Wang,Androgynous,Wan‐Ping Lee,Unknown,ok
+April,71,10.1002/alz.70239,Xiaomeng Xu,Androgynous,the Alzheimer's Disease Neuroimaging Initiative (ADNI),Female,ok
+April,72,10.1002/alz.70279,Megan Zuelsdorff,Female,Lisa L. Barnes,Female,ok
+May,2,10.1002/alz.70408,Elizabeth J. Andrews,Female,for the ABC‐DS Consortium,Unknown,ok
+May,3,10.1002/alz.70358,M. Muaaz Aslam,Unknown,M. Ilyas Kamboh,Unknown,ok
+May,4,10.1002/alz.70324,Concepción Barrio,Female,María P. Aranda,Female,ok
+May,5,10.1002/alz.70360,Quintasha Beamon,Unknown,Jagan A. Pillai,Unknown,ok
+May,6,10.1002/alz.70342,Alexander Maximilian Bernhardt,Male,Johannes Levin,Male,ok
+May,7,10.1002/alz.70345,Dongsheng Bian,Androgynous,representing ADC,Unknown,ok
+May,8,10.1002/alz.70367,Arabella Bouzigues,Female,the GENetic Frontotemporal dementia Initiative (GENFI),Female,ok
+May,9,10.1002/alz.70377,Joseph Bradley,Male,Carlos Cruchaga,Male,ok
+May,10,10.1002/alz.70437,Andrew G. Breithaupt,Male,Katherine L. Possin,Female,ok
+May,11,10.1002/alz.70416,Jeffrey M. Burns,Male,Russell H. Swerdlow,Male,ok
+May,12,10.1002/alz.70379,Maria Carrigan,Female,Rik Ossenkoppele,Male,ok
+May,13,10.1002/alz.70326,Sokratis Charisis,Male,Mohamad Habes,Male,ok
+May,14,10.1002/alz.70325,Hannah Cho,Female,Yeji Hwang,Unknown,ok
+May,15,10.1002/alz.70334,Inessa Cohen,Female,Ula Hwang,Female,ok
+May,16,10.1002/alz.70419,Federica Cordella,Female,Silvia Di Angelantonio,Female,ok
+May,17,10.1002/alz.70469,Katheryn A. Q. Cousins,Female,and the Alzheimer's Disease Neuroimaging Initiative,Unknown,ok
+May,18,10.1002/alz.70343,Constance Delaby,Female,Sylvain Lehmann,Male,ok
+May,19,10.1002/alz.70397,Anisa Dhana,Female,Kumar B. Rajan,Male,ok
+May,20,10.1002/alz.70398,Kang‐Hsien Fan,Unknown,M. Ilyas Kamboh,Unknown,ok
+May,21,10.1002/alz.70387,Victoria L. Fleming,Female,Alzheimer's Biomarkers Consortium–Down Syndrome,Unknown,ok
+May,22,10.1002/alz.70428,Evan Fletcher,Male,Zvinka Z. Zlatar,Unknown,ok
+May,23,10.1002/alz.70424,Jessie Fanglu Fu,Female,the Alzheimer Biomarkers Consortium–Down Syndrome (ABC‐DS),Female,ok
+May,24,10.1002/alz.70339,Maryam Gholampour,Female,Mohammad Haeri,Male,ok
+May,25,10.1002/alz.70361,Grace J. Goodwin,Female,Samantha E. John,Female,ok
+May,26,10.1002/alz.70436,Tadeja Gracner,Female,Darius Lakdawalla,Male,ok
+May,27,10.1002/alz.70365,Renée C. Groechel,Female,Rebecca F. Gottesman,Female,ok
+May,28,10.1002/alz.70352,Yuna Gu,Female,ADNI and K‐ROAD study groups,Unknown,ok
+May,29,10.1002/alz.70327,Cellas A. Hayes,Unknown,Roland J. Thorpe,Male,ok
+May,30,10.1002/alz.70372,Thomas J. Hoffmann,Male,Van Ta Park,Male,ok
+May,31,10.1002/alz.70417,Jea Woo Kang,Androgynous,Barbara B. Bendlin,Female,ok
+May,32,10.1002/alz.70335,Kaidi Kang,Female,Dandan Liu,Androgynous,ok
+May,33,10.1002/alz.70401,Tomas Kavanagh,Male,Eleanor Drummond,Female,ok
+May,34,10.1002/alz.70390,Riley E. Kemna,Male,Jill K. Morris,Female,ok
+May,35,10.1002/alz.70371,Nusrat Khan,Male,Jorge J. Llibre‐Guerra,Male,ok
+May,36,10.1002/alz.70319,Bjørn‐Eivind Kirsebom,Unknown,Kaj Blennow,Male,ok
+May,37,10.1002/alz.70395,Amanda Labuza,Female,Stephen D. Ginsberg,Male,ok
+May,38,10.1002/alz.70320,Courtney Lane‐Donovan,Female,Aimee W. Kao,Female,ok
+May,39,10.1002/alz.70407,Elizabeth M. Leach,Female,Ahmed A. Bahrani,Male,ok
+May,40,10.1002/alz.70380,Aurélie Ledreux,Female,Juan Fortea,Male,ok
+May,41,10.1002/alz.70362,Matthew Leming,Male,Hyungsoon Im,Female,ok
+May,42,10.1002/alz.70373,Kenan Li,Male,Ganesh M. Babulal,Male,ok
+May,43,10.1002/alz.70386,Christos Panagiotis Lisgaras,Male,Ricardo S. Osorio,Male,ok
+May,44,10.1002/alz.70438,Susanna Lopez,Female,and INSIGHT‐preAD study group,Unknown,ok
+May,45,10.1002/alz.70376,Emma S. Luckett,Female,the AMYPAD Consortium,Female,ok
+May,46,10.1002/alz.70421,Vincent Malotaux,Male,Yakeel T. Quiroz,Unknown,ok
+May,47,10.1002/alz.70411,Alessandra Marengoni,Female,Davide Liborio Vetrano,Male,ok
+May,48,10.1002/alz.70357,Andrew McVea,Male,ABC‐DS investigators,Unknown,ok
+May,49,10.1002/alz.70344,Adam P. Mecca,Male,Christopher H. van Dyck,Male,ok
+May,50,10.1002/alz.70364,Emma Nolan,Female,Kelsie M. Full,Female,ok
+May,51,10.1002/alz.70396,Paula Perez‐Corredor,Female,Claudia Marino,Female,ok
+May,52,10.1002/alz.70384,Jay J. Pillai,Male,Clifford R. Jack,Male,ok
+May,53,10.1002/alz.70381,Sheelakumari Raghavan,Unknown,Prashanthi Vemuri,Unknown,ok
+May,54,10.1002/alz.70418,Annalise Rahman‐Filipiak,Female,Lindsay R. Clark,Female,ok
+May,55,10.1002/alz.70359,Siobhan T. Reilly,Female,Andrew J. E. Harding,Male,ok
+May,56,10.1002/alz.70405,Elizabeth K. Rhodus,Female,Allison Gibson,Female,ok
+May,57,10.1002/alz.70341,Miguel Rosa‐Grilo,Male,Nick C. Fox,Male,ok
+May,58,10.1002/alz.70413,Mathijs T. Rosbergen,Male,Frank J. Wolters,Male,ok
+May,59,10.1002/alz.70426,Marc D. Rudolph,Male,Michelle M. Mielke,Female,ok
+May,60,10.1002/alz.70382,Fedal Saini,Unknown,André Strydom,Male,ok
+May,61,10.1002/alz.70409,Anuradha Sehrawat,Female,Thomas K. Karikari,Male,ok
+May,62,10.1002/alz.70374,Hiroaki Sekiya,Male,Dennis W. Dickson,Male,ok
+May,63,10.1002/alz.70383,Kelsey R. Sewell,Female,The Dominantly Inherited Alzheimer Network (DIAN),Female,ok
+May,64,10.1002/alz.70412,Claudio Singh Solorzano,Male,Cristina Festari,Female,ok
+May,65,10.1002/alz.70368,Valeriia Sitnikova,Unknown,Tarja M. Malm,Female,ok
+May,66,10.1002/alz.70353,Laura Stankeviciute,Female,for the ALFA Study,Unknown,ok
+May,67,10.1002/alz.70322,Max A. Thorwald,Male,Caleb E. Finch,Male,ok
+May,68,10.1002/alz.70355,Casey R. Vanderlip,Androgynous,Craig E. L. Stark,Male,ok
+May,69,10.1002/alz.70328,Ping Wang,Androgynous,Jonathan L. Haines,Male,ok
+May,70,10.1002/alz.70378,Jie Wang,Androgynous,the Shanghai Memory Study (SMS),Female,ok
+May,71,10.1002/alz.70399,Ruizhi Wang,Androgynous,Debomoy K. Lahiri,Unknown,ok
+May,72,10.1002/alz.70333,Jie Wang,Androgynous,Fang Xie,Androgynous,ok
+May,73,10.1002/alz.70427,Ryohei Watanabe,Male,Edward B. Lee,Male,ok
+May,74,10.1002/alz.70351,Rachel A. Whitmer,Female,for the U.S. POINTER Study Group,Unknown,ok
+May,75,10.1002/alz.70406,Cong Yang,Male,Zhigang Liu,Androgynous,ok
+May,76,10.1002/alz.70323,Jarmin Yeh,Unknown,Suzanna Martinez,Female,ok
+May,77,10.1002/alz.70425,Jenny Jia Yu,Female,Rosie Watson,Female,ok
+May,78,10.1002/alz.70332,Miao Zhang,Androgynous,Yao Li,Androgynous,ok
+May,79,10.1002/alz.70331,Xiaoduo Zhao,Unknown,Jing Zhang,Androgynous,ok
+May,80,10.1002/alz.70369,Naizhen Zheng,Unknown,Yun‐wu Zhang,Unknown,ok
+May,81,10.1002/alz.70402,Aline R. Zimmer,Female,Edith Hamel,Female,ok
+June,2,10.1002/alz.70560,Hilal Salim Said Al Shamsi,Female,for the AIBL Research Group,Unknown,ok
+June,3,10.1002/alz.70442,Shakiru A. Alaka,Unknown,Siu Kwan Sze,Unknown,ok
+June,4,10.1002/alz.70496,Guilherme Moraes Balbim,Male,Teresa Liu‐Ambrose,Female,ok
+June,5,10.1002/alz.70486,Alexandra M. Barnett,Female,Leon G. Coleman,Male,ok
+June,6,10.1002/alz.70482,Hannah Baumeister,Female,for the DELCODE study group,Unknown,ok
+June,7,10.1002/alz.70507,Timothy John Baumgartner,Male,Fernanda Laezza,Female,ok
+June,8,10.1002/alz.70444,Deepak Kumar Behera,Male,Snehasish Tripathy,Unknown,ok
+June,9,10.1002/alz.70500,Luciana Bertholim‐Nasciben,Female,Jeffery M. Vance,Male,ok
+June,10,10.1002/alz.70489,Elizabeth E. Blue,Female,Ellen M. Wijsman,Female,ok
+June,11,10.1002/alz.70516,Emily Margaret Louise Bowman,Female,Emma L. Cunningham,Female,ok
+June,12,10.1002/alz.70510,Dennis Rogers Buwembo,Male,Mark Kaddu Mukasa,Male,ok
+June,13,10.1002/alz.70454,Noelia Calvo,Female,Gillian Einstein,Female,ok
+June,14,10.1002/alz.70429,Shreya Chakraborty,Female,Bratati Kahali,Unknown,ok
+June,15,10.1002/alz.70461,Ping Che,Androgynous,Nan Zhang,Female,ok
+June,16,10.1002/alz.70561,Min Chu,Androgynous,Liyong Wu,Androgynous,ok
+June,17,10.1002/alz.70458,Nikoleta Daskoulidou,Female,Bryan Paul Morgan,Male,ok
+June,18,10.1002/alz.70456,Flavie E. Detcheverry,Female,Sridar Narayanan,Unknown,ok
+June,19,10.1002/alz.70487,Tesfahun C. Eshetie,Unknown,Maria C. Inacio,Female,ok
+June,20,10.1002/alz.70529,Temitope Farombi,Unknown,Rufus Akinyemi,Male,ok
+June,21,10.1002/alz.70502,Marta Fernández‐Matarrubia,Female,Eloy Rodríguez‐Rodríguez,Male,ok
+June,22,10.1002/alz.70430,Debra A. Fleischman,Female,Lisa L. Barnes,Female,ok
+June,23,10.1002/alz.70451,Esther M. Friedman,Female,Vicki A. Freedman,Female,ok
+June,24,10.1002/alz.70722,Kelsie M. Full,Female,Angela L. Jefferson,Female,ok
+June,25,10.1002/alz.70519,Huanyao Gao,Unknown,Eugenia Trushina,Female,ok
+June,26,10.1002/alz.70485,Indira Garcia‐Cordero,Female,Maria Carmela Tartaglia,Female,ok
+June,27,10.1002/alz.70483,Klara Gawor,Female,Sandra O. Tomé,Female,ok
+June,28,10.1002/alz.70463,Alexandra Gogola,Female,Ann D Cohen,Female,ok
+June,29,10.1002/alz.70441,Joshua D. Grill,Male,Rema Raman,Female,ok
+June,30,10.1002/alz.70491,Ivelina Gueorguieva,Female,John R. Sims,Male,ok
+June,31,10.1002/alz.70513,Muqi Guo,Unknown,Lisa F. Berkman,Female,ok
+June,32,10.1002/alz.70452,Amit Kumar Gupta,Male,Feixiong Cheng,Unknown,ok
+June,33,10.1002/alz.70498,Calvin W. Howard,Male,Michael D. Fox,Male,ok
+June,34,10.1002/alz.70579,Yen‐Ning Huang,Unknown,Kwangsik Nho,Male,ok
+June,35,10.1002/alz.70528,Anke Hüls,Female,Donghai Liang,Androgynous,ok
+June,36,10.1002/alz.70446,Mina Idris,Female,André Strydom,Male,ok
+June,37,10.1002/alz.70530,Jean Ikanga,Male,Alden L. Gross,Male,ok
+June,38,10.1002/alz.70443,Na‐Yeon Jung,Unknown,and the Longitudinal Study of Early Onset Dementia and Family Members (LEAF) Investigators,Unknown,ok
+June,39,10.1002/alz.70591,Kristian Juul‐Madsen,Male,Thomas E. Willnow,Male,ok
+June,40,10.1002/alz.70521,Tereza Kacerova,Female,Fay Probert,Female,ok
+June,41,10.1002/alz.70468,David S. Knopman,Male,and the Alzheimer's Disease Neuroimaging Initiative,Unknown,ok
+June,42,10.1002/alz.70505,Lindsey A. Kuchenbecker,Female,Minerva M. Carrasquillo,Female,ok
+June,43,10.1002/alz.70679,Patrick Lao,Male,Adam M. Brickman,Male,ok
+June,44,10.1002/alz.70492,Amanda N. Leggett,Female,Noelle E. Carlozzi,Female,ok
+June,45,10.1002/alz.70453,Yi‐Chia Liaw,Unknown,Yung‐Po Liaw,Unknown,ok
+June,46,10.1002/alz.70564,Ruei‐Lung Lin,Unknown,Olivier Thibault,Male,ok
+June,47,10.1002/alz.70488,Houjun Liu,Unknown,Xin Liu,Androgynous,ok
+June,48,10.1002/alz.70520,Brian J. Lopresti,Male,Victor L. Villemagne,Male,ok
+June,49,10.1002/alz.70480,Elizabeth Ludwig‐Borycz,Female,Cindy W. Leung,Female,ok
+June,50,10.1002/alz.70440,Etuini Ma'u,Unknown,Sarah Cullum,Female,ok
+June,51,10.1002/alz.70449,Dimitri B. A. Mantovani,Male,Daniele de Paula Faria,Female,ok
+June,52,10.1002/alz.70506,Jissa Martin,Unknown,David Denston Ward,Male,ok
+June,53,10.1002/alz.70562,Laia Montoliu‐Gaya,Female,Pascual Sánchez‐Juan,Male,ok
+June,54,10.1002/alz.70508,Dan Mungas,Male,Elizabeth Rose Mayeda,Female,ok
+June,55,10.1002/alz.70522,Yu Nakamura,Androgynous,Kaneyoshi Takahashi,Unknown,ok
+June,56,10.1002/alz.70474,Sylvia E. Perez,Female,Elliott J. Mufson,Male,ok
+June,57,10.1002/alz.70501,Alaina M. Reagan,Female,Gareth R. Howell,Male,ok
+June,58,10.1002/alz.70457,Jackson A. Roberts,Male,Jose Gutierrez,Male,ok
+June,59,10.1002/alz.70523,Deborah K. Rose,Female,James R. Bateman,Male,ok
+June,60,10.1002/alz.70450,S. Ahmad Sajjadi,Unknown,Annlia Paganini‐Hill,Unknown,ok
+June,61,10.1002/alz.70503,Chor‐Wing Sing,Unknown,Ching‐Lung Cheung,Unknown,ok
+June,62,10.1002/alz.70495,Hanneke J. A. Smaling,Female,Jenny T. van der Steen,Female,ok
+June,63,10.1002/alz.70448,Lorena Sordo,Female,Elizabeth Head,Female,ok
+June,64,10.1002/alz.70509,Simrika Thapa,Unknown,Maria Carmela Tartaglia,Female,ok
+June,65,10.1002/alz.70432,Sarah Tomaszewski Farias,Female,for the U.S. POINTER Study Group,Unknown,ok
+June,66,10.1002/alz.70494,Jean‐Francois Trani,Unknown,Ganesh M. Babulal,Male,ok
+June,67,10.1002/alz.70481,Poonam Trivedi,Female,Caitlin S. Latimer,Female,ok
+June,68,10.1002/alz.70447,Lídia Vaqué‐Alcázar,Female,Juan Fortea,Male,ok
+June,69,10.1002/alz.70490,Deepak K. Vijaya Kumar,Male,Rudolph E. Tanzi,Male,ok
+June,70,10.1002/alz.70455,Monica E. Walters,Female,Laura B. Zahodne,Female,ok
+June,71,10.1002/alz.70465,Qiang Wang,Androgynous,Huarong Zhou,Androgynous,ok
+June,72,10.1002/alz.70563,Jun Wang,Male,Jin‐Tai Yu,Unknown,ok
+June,73,10.1002/alz.70518,Jordan Watson,Male,Brittany Butts,Female,ok
+June,74,10.1002/alz.70445,Nicole R. West,Female,Anita Bhattacharyya,Female,ok
+June,75,10.1002/alz.70592,Printha Wijesinghe,Unknown,Joanne A. Matsubara,Female,ok
+June,76,10.1002/alz.70504,Charles C. Windon,Male,Gil D. Rabinovici,Male,ok
+June,77,10.1002/alz.70512,Asger Wretlind,Male,Cristina Legido‐Quigley,Female,ok
+June,78,10.1002/alz.70460,Chao‐Yi Wu,Unknown,Hiroko H. Dodge,Female,ok
+June,79,10.1002/alz.70439,Jing Wu,Androgynous,Qingfeng Du,Androgynous,ok
+June,80,10.1002/alz.70511,Anika Wuestefeld,Female,and for the Alzheimer's Disease Neuroimaging Initiative,Unknown,ok
+June,81,10.1002/alz.70493,Season K. Wyatt‐Johnson,Unknown,Randy R. Brutkiewicz,Male,ok
+June,82,10.1002/alz.70464,Kaiyuan Zheng,Androgynous,Kam W. Leong,Male,ok
+July,2,10.1002/alz.70583,Bilcag Akgun,Unknown,Margaret A. Pericak‐Vance,Female,ok
+July,3,10.1002/alz.70575,Francisco C. Almeida,Male,Timothy E. Richardson,Male,ok
+July,4,10.1002/alz.70631,Yohannes A. Ambaw,Unknown,Robert V. Farese,Male,ok
+July,5,10.1002/alz.70531,Bianca Brijnath,Female,Santosh Loganathan,Female,ok
+July,6,10.1002/alz.70569,Ester Cerin,Female,Perminder S. Sachdev,Unknown,ok
+July,7,10.1002/alz.70659,Chang‐Le Chen,Unknown,Mayo Clinic Study of Aging,Female,ok
+July,8,10.1002/alz.70553,Zhenyu Cheng,Androgynous,Lingfei Guo,Androgynous,ok
+July,9,10.1002/alz.70622,Brenna A. Cholerton,Female,Edward D. Huey,Male,ok
+July,10,10.1002/alz.70543,Chenyin Chu,Unknown,Yijun Pan,Androgynous,ok
+July,11,10.1002/alz.70660,Min Young Chun,Androgynous,Hee Jin Kim,Female,ok
+July,12,10.1002/alz.70597,Jacob Alexander Cleary,Male,Gagan Deep,Unknown,ok
+July,13,10.1002/alz.70625,Petrice M. Cogswell,Unknown,Clifford R. Jack,Male,ok
+July,14,10.1002/alz.70580,Emma P. Danhash,Female,Celeste M. Karch,Female,ok
+July,15,10.1002/alz.70632,Lauren Edwards,Female,Katherine J. Bangen,Female,ok
+July,16,10.1002/alz.70609,Olivia M. Emanuel,Female,Rebecca F. Gottesman,Female,ok
+July,17,10.1002/alz.70704,Jennifer M. Erichsen,Female,Suzanne Craft,Female,ok
+July,18,10.1002/alz.70595,Sarah Floud,Female,Gillian K. Reeves,Female,ok
+July,19,10.1002/alz.70581,Maria Franquesa‐Mullerat,Female,Alexandre Bejanin,Male,ok
+July,20,10.1002/alz.70565,Scott R. French,Male,Craig C. Weinkauf,Male,ok
+July,21,10.1002/alz.70804,Veerle van Gils,Female,Stephanie J. B. Vos,Female,ok
+July,22,10.1002/alz.70540,Yihao Guo,Unknown,Liangdong Zhou,Unknown,ok
+July,23,10.1002/alz.70584,Muqi Guo,Unknown,Darina T. Bassil,Female,ok
+July,24,10.1002/alz.70570,Celine Haddad,Unknown,Shady Rahayel,Male,ok
+July,25,10.1002/alz.70551,Margo B. Heston,Female,for the Alzheimer's Disease Neuroimaging Initiative,Unknown,ok
+July,26,10.1002/alz.70590,Tsung‐Cheng Hsieh,Unknown,Chen‐Pei Ho,Unknown,ok
+July,27,10.1002/alz.70681,Moonil Kang,Unknown,Lindsay A. Farrer,Female,ok
+July,28,10.1002/alz.70594,Sujin Kang,Female,Lefkos T. Middleton,Unknown,ok
+July,29,10.1002/alz.70619,Therese H. Kim,Female,David L. Sultzer,Male,ok
+July,30,10.1002/alz.70616,Ave Kivisild,Female,Eino Solje,Male,ok
+July,31,10.1002/alz.70568,Anna Lavrova,Female,Keith A Josephs,Male,ok
+July,32,10.1002/alz.70572,Lisette Gwendolyn LeMerise,Female,for the ABC‐DS Investigators,Unknown,ok
+July,33,10.1002/alz.70626,Shannon Y. Lee,Female,Breton M. Asken,Unknown,ok
+July,34,10.1002/alz.70588,Riccardo Leone,Male,Giuseppe Barisano,Male,ok
+July,35,10.1002/alz.70629,Mark W. Logue,Male,Lindsay A. Farrer,Female,ok
+July,36,10.1002/alz.70596,Emily F. Maly,Female,James B. Leverenz,Male,ok
+July,37,10.1002/alz.70550,Michela Marcatti,Female,Giulio Taglialatela,Male,ok
+July,38,10.1002/alz.70598,Han Kyu Na,Androgynous,Chul Hyoung Lyoo,Male,ok
+July,39,10.1002/alz.70621,Nerissa Nance,Unknown,Romain Neugebauer,Male,ok
+July,40,10.1002/alz.70554,Amani M. Norling,Female,Kirk I. Erickson,Male,ok
+July,41,10.1002/alz.70582,Anna Novoseltseva,Female,Irving J. Bigio,Male,ok
+July,42,10.1002/alz.70537,Mieke Nuytten,Female,Gerard Griffioen,Male,ok
+July,43,10.1002/alz.70781,Dominique Paauw,Androgynous,Kay Deckers,Male,ok
+July,44,10.1002/alz.70623,Tony X. Phan,Male,R. Ryan Darby,Unknown,ok
+July,45,10.1002/alz.70604,Olivier Piguet,Male,Rebekah M. Ahmed,Female,ok
+July,46,10.1002/alz.70587,Shriya Pokala,Unknown,Monica M. Diaz,Female,ok
+July,47,10.1002/alz.70593,Aura M. Ramirez,Female,Jeffery M. Vance,Male,ok
+July,48,10.1002/alz.70539,Yueqi Ren,Androgynous,Craig E. L. Stark,Male,ok
+July,49,10.1002/alz.70541,Ursula G. Saelzler,Female,Matthew S. Panizzon,Male,ok
+July,50,10.1002/alz.70637,Alexandra Santos,Female,Tiago Gil Oliveira,Male,ok
+July,51,10.1002/alz.70613,Sara Savola,Female,Liisa Myllykangas,Female,ok
+July,52,10.1002/alz.70571,Salimah Z. Shariff,Unknown,Richard G. Booth,Male,ok
+July,53,10.1002/alz.70547,Yixiao Song,Unknown,Iva Miljkovic,Female,ok
+July,54,10.1002/alz.70690,Alan B. Stevens,Male,Marcia G. Ory,Female,ok
+July,55,10.1002/alz.70573,Rachel L. Studer,Female,Sterling C. Johnson,Male,ok
+July,56,10.1002/alz.70605,Chao Tang,Androgynous,Dian He,Female,ok
+July,57,10.1002/alz.70589,Xinran Tian,Androgynous,Kenneth S. Kosik,Male,ok
+July,58,10.1002/alz.70538,Priscilla Tjokrowijoto,Female,Samantha M Loi,Female,ok
+July,59,10.1002/alz.70574,Christina Tremblay,Female,Shady Rahayel,Male,ok
+July,60,10.1002/alz.70624,Lydia Trudel,Female,Pedro Rosa‐Neto,Male,ok
+July,61,10.1002/alz.70586,Jackie Shuk Man Tsui,Androgynous,Nancy Y. Ip,Female,ok
+July,62,10.1002/alz.70544,Yuto Uchida,Unknown,Kenichi Oishi,Male,ok
+July,63,10.1002/alz.70611,Alexa E. Walter,Female,Andrea L. C. Schneider,Female,ok
+July,64,10.1002/alz.70628,Zhan Wang,Male,Meredith N. Zozus,Female,ok
+July,65,10.1002/alz.70548,Xiwu Wang,Unknown,Jie Zhang,Androgynous,ok
+July,66,10.1002/alz.70633,Bin Wang,Androgynous,Li Shao,Androgynous,ok
+July,67,10.1002/alz.70603,Li Yang,Androgynous,Stephen T. C. Wong,Male,ok
+July,68,10.1002/alz.70645,Alex J. T. Yang,Male,Rebecca E. K. MacPherson,Female,ok
+July,69,10.1002/alz.70545,Luopeiwen Yi,Unknown,Tananun Songdechakraiwut,Unknown,ok
+August,2,10.1002/alz.70669,Rufus O. Akinyemi,Male,Brian Lawlor,Male,ok
+August,3,10.1002/alz.70708,Dustin Loren V. Almanza,Male,Bojana Stefanovic,Female,ok
+August,4,10.1002/alz.70692,Filippos Anagnostakis,Male,Christos Davatzikos,Male,ok
+August,5,10.1002/alz.70742,Claire André,Female,the Sleep and Circadian Rhythms Professional Interest Area of the International Society to Advance Alzheimer's Research and Treatment (ISTAART),Female,ok
+August,6,10.1002/alz.70721,Carlos E. E. Araujo‐Menendez,Male,Ariana M. Stickel,Female,ok
+August,7,10.1002/alz.70656,Alexandra S. Atkins,Female,Alette M. Wessels,Female,ok
+August,8,10.1002/alz.70676,Alina Bauer,Female,Tobias Bittner,Male,ok
+August,9,10.1002/alz.70644,Matteo Bellitti,Male,Vijaya B. Kolachalama,Female,ok
+August,10,10.1002/alz.70741,Liset de Boer,Female,the GENFI Consortium,Female,ok
+August,11,10.1002/alz.70651,Corey J. Bolton,Male,Angela L. Jefferson,Female,ok
+August,12,10.1002/alz.70671,Gregory Brown,Male,Nilton Custodio,Unknown,ok
+August,13,10.1002/alz.70733,Michelle R. Caunca,Female,Kristine Yaffe,Female,ok
+August,14,10.1002/alz.70657,Kwun C. G. Chan,Unknown,Walter A. Kukull,Male,ok
+August,15,10.1002/alz.70710,Yiwen Chen,Androgynous,Changhu Liang,Unknown,ok
+August,16,10.1002/alz.70694,Seo‐Eun Choi,Unknown,Paul K. Crane,Male,ok
+August,17,10.1002/alz.70640,Clara Ciampi,Female,Cristina Lanni,Female,ok
+August,18,10.1002/alz.70697,Karly A. Cody,Female,Elizabeth C. Mormino,Female,ok
+August,19,10.1002/alz.70702,Viswanath Devanarayan,Unknown,Shobha Dhadda,Female,ok
+August,20,10.1002/alz.70707,James D. Doecke,Male,John Winslow,Male,ok
+August,21,10.1002/alz.70627,Daniel A. Dorfsman,Male,William K. Scott,Male,ok
+August,22,10.1002/alz.70726,Natalie C. Edwards,Female,Adam M. Brickman,Male,ok
+August,23,10.1002/alz.70677,Emily Eijansantos,Female,Zachary A. Miller,Male,ok
+August,24,10.1002/alz.70688,Sheina Emrani,Unknown,Timothy M. Hughes,Male,ok
+August,25,10.1002/alz.70717,Dhamidhu Eratne,Unknown,And The MiND Study Group,Unknown,ok
+August,26,10.1002/alz.70705,Jeanne Gallée,Female,Paul K. Crane,Male,ok
+August,27,10.1002/alz.70730,Tong‐Yao Gao,Unknown,Wei‐Ping Zhang,Unknown,ok
+August,28,10.1002/alz.70720,Leslie S. Gaynor,Female,Dan M. Mungas,Male,ok
+August,29,10.1002/alz.70693,Lucy L. Gibson,Female,Claudia K. Suemoto,Female,ok
+August,30,10.1002/alz.70760,Dana Godrich,Female,the Alzheimer's Disease Genetics Consortium (ADGC),Female,ok
+August,31,10.1002/alz.70729,Rory A. Greer,Male,Yuhua Song,Androgynous,ok
+August,32,10.1002/alz.70731,Shannon Halloway,Female,Klodian Dhana,Male,ok
+August,33,10.1002/alz.70635,Deling He,Androgynous,Kimberly Mueller,Female,ok
+August,34,10.1002/alz.70699,Hui Hong,Androgynous,Hugh S. Markus,Male,ok
+August,35,10.1002/alz.70735,Jean Ikanga,Male,Alvaro Alonso,Male,ok
+August,36,10.1002/alz.70642,Voyko Kavcic,Unknown,Bruno Giordani,Male,ok
+August,37,10.1002/alz.70723,Michael J. Kleiman,Male,James E. Galvin,Male,ok
+August,38,10.1002/alz.70745,William Robert Kwapong,Male,Zhen Wang,Androgynous,ok
+August,39,10.1002/alz.70696,Julie Latomme,Female,Greet Cardon,Female,ok
+August,40,10.1002/alz.70665,Hieu T. Le,Male,Edwin C. K. Tan,Male,ok
+August,41,10.1002/alz.70675,Sungjoo Lee,Unknown,"the ADNI, A4, and K‐ROAD studies",Female,ok
+August,42,10.1002/alz.70649,Nancy Raitano Lee,Female,Gregory L. Wallace,Male,ok
+August,43,10.1002/alz.70680,Shuai Liu,Androgynous,Yong Ji,Male,ok
+August,44,10.1002/alz.70712,Weiquan Luo,Androgynous,Alzheimer's Biomarkers Consortium–Down Syndrome (ABC‐DS) Investigators,Unknown,ok
+August,45,10.1002/alz.70740,Teodora Z. Markova,Female,for the Alzheimer's Disease Neuroimaging Initiative,Unknown,ok
+August,46,10.1002/alz.70689,Eric M. McDade,Male,The DIAN‐TU Study Team and DIAN Obs Team,Female,ok
+August,47,10.1002/alz.70650,Archana J. McEligot,Female,Theresa Quynh Do,Female,ok
+August,48,10.1002/alz.70668,Zachary A. Miller,Male,Maria Luisa Gorno‐Tempini,Female,ok
+August,49,10.1002/alz.70655,Phuong Thuy Nguyen Ho,Female,Julia Neitzel,Female,ok
+August,50,10.1002/alz.70638,Liv Tybjærg Nordestgaard,Female,Børge G. Nordestgaard,Male,ok
+August,51,10.1002/alz.70728,Andrew Ouellette,Male,Catherine Kaczorowski,Female,ok
+August,52,10.1002/alz.70713,Eleni Palpatzis,Female,Patrizia Vannini,Female,ok
+August,53,10.1002/alz.70746,Guilherme Povala,Male,Tharick A. Pascoal,Unknown,ok
+August,54,10.1002/alz.70698,Lyndsi Powell,Unknown,Brian S. Appleby,Male,ok
+August,55,10.1002/alz.70703,Tiziana Raia,Female,Andrea Fuso,Female,ok
+August,56,10.1002/alz.70727,Anika Rädke,Female,Wolfgang Hoffmann,Male,ok
+August,57,10.1002/alz.70718,Si Won Ryoo,Androgynous,the ONDRI Investigators,Female,ok
+August,58,10.1002/alz.70663,Kang Shen,Androgynous,Kenneth Hepburn,Male,ok
+August,59,10.1002/alz.70678,Hui Shi,Androgynous,Kelsie M. Full,Female,ok
+August,60,10.1002/alz.70786,Allison Snyder,Female,Justin Y. Kwan,Male,ok
+August,61,10.1002/alz.70732,David N. Soleimani‐Meigooni,Male,Alzheimer's Disease Neuroimaging Initiative,Unknown,ok
+August,62,10.1002/alz.70695,Mahdie Soltaninejad,Unknown,GENFI Consortium,Unknown,ok
+August,63,10.1002/alz.70739,Ajay Sood,Male,Zoe Arvanitakis,Female,ok
+August,64,10.1002/alz.70758,Eyal Soreq,Male,David J. Sharp,Male,ok
+August,65,10.1002/alz.70666,Patricia G. Synnott,Female,Pei‐Jung Lin,Unknown,ok
+August,66,10.1002/alz.70715,Johanna Thunell,Female,Katherine E. M. Miller,Female,ok
+August,67,10.1002/alz.70706,Han Tong,Androgynous,Zoe Arvanitakis,Female,ok
+August,68,10.1002/alz.70658,Diana L. Townsend,Female,Rachel F. Buckley,Female,ok
+August,69,10.1002/alz.70716,Christopher T. W. Tsang,Male,Kai‐Hang Yiu,Unknown,ok
+August,70,10.1002/alz.70674,Francesca Vitali,Female,Craig Weinkauf,Male,ok
+August,71,10.1002/alz.70738,Eleonora M. Vromen,Female,Betty Tijms,Female,ok
+August,72,10.1002/alz.70643,Guoqiao Wang,Androgynous,for the Alzheimer's Disease Neuroimaging Initiative,Unknown,ok
+August,73,10.1002/alz.70664,Jing Wang,Androgynous,Bei Wu,Androgynous,ok
+August,74,10.1002/alz.70711,Emma Weltings,Female,Sietske A. M. Sikkes,Female,ok
+August,75,10.1002/alz.70714,Victoria J. Williams,Female,Sanjay Asthana,Male,ok
+August,76,10.1002/alz.70662,Roy Yaari,Male,John R. Sims,Male,ok
+August,77,10.1002/alz.70634,Yashar Zeighami,Male,Mahsa Dadar,Female,ok
+August,78,10.1002/alz.70683,Wenxin Zhang,Androgynous,Yuan Ma,Androgynous,ok
+August,79,10.1002/alz.70639,Pengyue Zhang,Unknown,Feixiong Cheng,Unknown,ok
+August,80,10.1002/alz.70641,Carolyn W. Zhu,Female,Mary Sano,Female,ok
+September,2,10.1002/alz.70754,Yousaf Abughofah,Unknown,Andrew J. Saykin,Male,ok
+September,3,10.1002/alz.70846,Adrianna I. Acevedo‐Fontánez,Female,Iva Miljkovic,Female,ok
+September,4,10.1002/alz.70818,Michael F. Almeida,Male,Ben A. Bahr,Male,ok
+September,5,10.1002/alz.70791,Md Mamun Al‐Amin,Unknown,Jungsu Kim,Male,ok
+September,6,10.1002/alz.70826,Shea J. Andrews,Androgynous,Alzheimer's Disease Neuroimaging Initiative,Unknown,ok
+September,7,10.1002/alz.70802,Dario Bachmann,Male,Anton Gietl,Male,ok
+September,8,10.1002/alz.70830,Madison C. Bangs,Female,Nicholas T. Seyfried,Male,ok
+September,9,10.1002/alz.70748,Dylan Barber,Male,Heather C. Rice,Female,ok
+September,10,10.1002/alz.70772,Logan M. Bedford,Male,Stephanie J. Bissel,Female,ok
+September,11,10.1002/alz.70829,Nishita Bhembre,Unknown,Patricio Opazo,Male,ok
+September,12,10.1002/alz.70783,Davina Biel,Female,for the Alzheimer's Disease Neuroimaging Initiative (ADNI),Unknown,ok
+September,13,10.1002/alz.70821,Rebecca A. Buchanan,Female,Fiona E. Harrison,Female,ok
+September,14,10.1002/alz.70792,Diane Chan,Female,Li‐Huei Tsai,Unknown,ok
+September,15,10.1002/alz.70813,Lata Chaunsali,Female,Harald Sontheimer,Male,ok
+September,16,10.1002/alz.70750,Sihui Chen,Androgynous,Huifang Shang,Androgynous,ok
+September,17,10.1002/alz.70790,Juan Antonio K. Chong Chie,Male,for the Alzheimer's Disease Neuroimaging Initiative,Unknown,ok
+September,18,10.1002/alz.70771,Sean Coulborn,Male,David C. Perry,Male,ok
+September,19,10.1002/alz.70922,Ryan Dacey,Male,Jesse Mez,Male,ok
+September,20,10.1002/alz.70799,Dina Dass,Female,Alzheimer Biomarker Consortium – Down syndrome (ABC‐DS),Unknown,ok
+September,21,10.1002/alz.70749,Michael C. B. David,Male,Paresh A. Malhotra,Unknown,ok
+September,22,10.1002/alz.70766,Desarae A. Dempsey,Unknown,Alzheimer Gut Microbiome Project Consortium,Unknown,ok
+September,23,10.1002/alz.70798,Monica M. Diaz,Female,Serggio C. Lanata,Unknown,ok
+September,24,10.1002/alz.70793,James D. Doecke,Male,Anthony Bannon,Male,ok
+September,25,10.1002/alz.70785,Xiaosheng Dong,Unknown,Chengchao Zhou,Unknown,ok
+September,26,10.1002/alz.70831,Lianlian Du,Androgynous,Sterling C. Johnson,Male,ok
+September,27,10.1002/alz.14351,Salma Elasfar,Female,Kaylena Ehgoetz Martens,Unknown,ok
+September,28,10.1002/alz.70810,Grace C. George,Female,Amy J. H. Kind,Female,ok
+September,29,10.1002/alz.70794,Anna E. Goodheart,Female,Stephen N. Gomperts,Male,ok
+September,30,10.1002/alz.70782,Grace J. Goodwin,Female,Samantha E. John,Female,ok
+September,31,10.1002/alz.70059,Cellas A. Hayes,Unknown,Kyan Younes,Unknown,ok
+September,32,10.1002/alz.70833,Kevin S. Heffernan,Male,Stacey M. Schaefer,Female,ok
+September,33,10.1002/alz.70770,Shimaa A. Heikal,Unknown,Mohamed Salama,Male,ok
+September,34,10.1002/alz.70844,Farideh Hosseinkhani,Female,Thomas Hankemeier,Male,ok
+September,35,10.1002/alz.70825,Brittany Intzandt,Female,ONDRI and CCNA Investigators,Unknown,ok
+September,36,10.1002/alz.70765,Tovia Jacobs,Unknown,for the Alzheimer's Disease Neuroimaging Initiative,Unknown,ok
+September,37,10.1002/alz.70837,Koung Mi Kang,Unknown,for the KBASE Research Group,Unknown,ok
+September,38,10.1002/alz.14489,Yuta Katsumi,Female,the LEADS Consortium for the Alzheimer's Disease Neuroimaging Initiative,Female,ok
+September,39,10.1002/alz.70894,Bo‐Hyun Kim,Unknown,for the Alzheimer's Disease Neuroimaging Initiative#,Unknown,ok
+September,40,10.1002/alz.70815,Hairin Kim,Unknown,Rebecca E. Amariglio,Female,ok
+September,41,10.1002/alz.70784,Andreea‐Claudia Kosa,Unknown,Karelle Leroy,Female,ok
+September,42,10.1002/alz.70877,Jessamine F. Kuehn,Unknown,Barbara B. Bendlin,Female,ok
+September,43,10.1002/alz.14307,Elizabeth Kuhn,Female,Harvard Aging Brain Study,Unknown,ok
+September,44,10.1002/alz.70805,Juliette H. Lanskey,Female,James B. Rowe,Male,ok
+September,45,10.1002/alz.70832,Michael L. Lee,Male,Paul K. Crane,Male,ok
+September,46,10.1002/alz.70900,Eun Hye Lee,Female,Kwangsik Nho,Male,ok
+September,47,10.1002/alz.70824,Xueqin Li,Androgynous,Yan Zhang,Male,ok
+September,48,10.1002/alz.70803,Wen Li,Androgynous,Qiao Song,Androgynous,ok
+September,49,10.1002/alz.70779,Xiaoyang Li,Androgynous,Yulin Dai,Androgynous,ok
+September,50,10.1002/alz.70762,Luigi Lorenzini,Male,Frederik Barkhof,Male,ok
+September,51,10.1002/alz.70756,Audrey Low,Female,the PREVENT Dementia Investigators,Female,ok
+September,52,10.1002/alz.70797,Ekaterina Manuilova,Female,Timo Grimmer,Male,ok
+September,53,10.1002/alz.70840,Federico Masserini,Male,Leonardo Pantoni,Male,ok
+September,54,10.1002/alz.70768,Maria Misiura,Female,Jean Ikanga,Male,ok
+September,55,10.1002/alz.70773,Jonathan Naftali,Male,Ophir Keret,Male,ok
+September,56,10.1002/alz.70834,Tenzin Namdul,Unknown,Dedra Buchwald,Female,ok
+September,57,10.1002/alz.70834,Tenzin Namdul,Unknown,Dedra Buchwald,Female,ok
+September,58,10.1002/alz.70880,Julie E. Oomens,Female,Elizabeth C. Mormino,Female,ok
+September,59,10.1002/alz.70769,George Nkrumah Osei,Male,David Larbi Simpong,Male,ok
+September,60,10.1002/alz.70776,María Pascual‐Lucas,Female,Mercè Boada,Female,ok
+September,61,10.1002/alz.70892,Valory N. Pavlik,Unknown,Laura Lovato,Female,ok
+September,62,10.1002/alz.70761,Taylor J. Pedersen,Male,Brendan P. Lucey,Male,ok
+September,63,10.1002/alz.70820,Batool Rizvi,Unknown,Rachel A. Whitmer,Female,ok
+September,64,10.1002/alz.70764,Lindsay J. Rotblatt,Female,Kelsey R. Thomas,Female,ok
+September,65,10.1002/alz.70842,Bonnie C. Sachs,Female,Stephen R. Rapp,Male,ok
+September,66,10.1002/alz.70800,Stephanie Santiago‐Mejias,Female,Anna Campbell Sullivan,Female,ok
+September,67,10.1002/alz.70755,Duygu Sezgin,Female,Sarah Janus,Female,ok
+September,68,10.1002/alz.70822,Taiki Sugimoto,Male,J‐MINT study group,Unknown,ok
+September,69,10.1002/alz.70866,Jordan Tanley,Male,Timothy M. Hughes,Male,ok
+September,70,10.1002/alz.70886,Rasika Venkatesh,Unknown,Marylyn D. Ritchie,Female,ok
+September,71,10.1002/alz.70752,Inge M. W. Verberk,Female,Charlotte Teunissen,Female,ok
+September,72,10.1002/alz.70812,Julie K. Wisch,Female,Brian Gordon,Male,ok
+September,73,10.1002/alz.70788,Kyung Ah Woo,Female,Jee‐Young Lee,Unknown,ok
+September,74,10.1002/alz.70747,Lily Xiao,Female,Alison Kitson,Female,ok
+September,75,10.1002/alz.70795,Rong Ye,Androgynous,Stephen N. Gomperts,Male,ok
+September,76,10.1002/alz.70839,Nien Yeh Daphne Yu,Unknown,Kristine Yaffe,Female,ok
+October,2,10.1002/alz.14410,Justina F. Avila‐Rieger,Female,Jennifer J. Manly,Female,ok
+October,3,10.1002/alz.14411,Viswanath Devanarayan,Unknown,for the Alzheimer's Disease Neuroimaging Initiative (ADNI),Unknown,ok
+October,4,10.1002/alz.14408,Kyle C. Kern,Female,Jason D. Hinman,Male,ok
+October,5,10.1002/alz.14406,Ramiro Eduardo Rea Reyes,Male,Sterling C. Johnson,Male,ok
+October,6,10.1002/alz.14409,Miriam Scarpa,Female,Amit Kumar,Male,ok
+October,7,10.1002/alz.14416,Dahyun Yi,Unknown,for the KBASE research group,Unknown,ok
+October,8,10.1002/alz.70870,Daniel Arnold,Male,Wyllians Vendramini Borelli,Unknown,ok
+October,9,10.1002/alz.70903,Lílian Viana dos Santos Azevedo,Unknown,Paulo Caramelli,Male,ok
+October,10,10.1002/alz.70899,Seung Hyun Baek,Androgynous,Dong‐Gyu Jo,Unknown,ok
+October,11,10.1002/alz.70916,Wasiu G. Balogun,Unknown,Thomas K. Karikari,Male,ok
+October,12,10.1002/alz.70980,Cristina Barahona‐López,Female,Beatriz Perez‐Gomez,Female,ok
+October,13,10.1002/alz.14414,Tobias Bittner,Male,Frederik Barkhof,Male,ok
+October,14,10.1002/alz.70897,Corey J. Bolton,Male,Angela L. Jefferson,Female,ok
+October,15,10.1002/alz.14403,Sarah Buchholz,Female,Hans Zempel,Male,ok
+October,16,10.1002/alz.14415,Raffaele Cacciaglia,Male,for the ALFA study,Unknown,ok
+October,17,10.1002/alz.14400,Yue Cai,Androgynous,Alzheimer's Disease Neuroimaging Initiative,Unknown,ok
+October,18,10.1002/alz.70889,Kwun C. G. Chan,Unknown,Lisa L. Barnes,Female,ok
+October,19,10.1002/alz.14391,Xiaozhi Chen,Androgynous,Zhiqiang Zhang,Androgynous,ok
+October,20,10.1002/alz.70896,Yu Chen,Androgynous,Catherine C. Kaczorowski,Female,ok
+October,21,10.1002/alz.70895,Jiu Chen,Androgynous,Bing Zhang,Androgynous,ok
+October,22,10.1002/alz.70930,Morgan A. Coburn,Male,Mathew Blurton‐Jones,Male,ok
+October,23,10.1002/alz.70890,Patrick Crowley,Male,Rónán O'Caoimh,Unknown,ok
+October,24,10.1002/alz.70979,Nilton Custodio,Unknown,Agustin Ibañez,Male,ok
+October,25,10.1002/alz.70931,Makrina Daniilidou,Female,Miia Kivipelto,Female,ok
+October,26,10.1002/alz.70881,Viswanath Devanarayan,Unknown,Michael C. Irizarry,Male,ok
+October,27,10.1002/alz.70960,Dvir Dori,Male,Howard Chertkow,Male,ok
+October,28,10.1002/alz.70905,Christopher H. van Dyck,Male,Lynn Kramer,Female,ok
+October,29,10.1002/alz.70910,Lauren Edwards,Female,Katherine J. Bangen,Female,ok
+October,30,10.1002/alz.70898,Jaclyn M. Eissman,Female,Badri N. Vardarajan,Male,ok
+October,31,10.1002/alz.70869,Fareshte Erani,Unknown,Kelsey R. Thomas,Female,ok
+October,32,10.1002/alz.70948,Elham Ghanbarian,Female,Ali Ezzati,Male,ok
+October,33,10.1002/alz.14429,Gabriela T. Gomez,Female,Keenan A. Walker,Male,ok
+October,34,10.1002/alz.70977,Despoina Goniotaki,Female,Deepak P. Srivastava,Male,ok
+October,35,10.1002/alz.14367,Anthony J. Griswold,Male,Margaret A. Pericak‐Vance,Female,ok
+October,36,10.1002/alz.70953,Stefano Guglielmo,Male,Nicola Origlia,Female,ok
+October,37,10.1002/alz.70954,Adam de Havenon,Male,Christopher D. Anderson,Male,ok
+October,38,10.1002/alz.70950,Zhiyong Hou,Androgynous,Weijun Huang,Androgynous,ok
+October,39,10.1002/alz.70879,Moriah J. Hovde,Female,Rudolph E. Tanzi,Male,ok
+October,40,10.1002/alz.70952,Stephanie Humblet‐Baron,Female,Adrian Liston,Male,ok
+October,41,10.1002/alz.70907,Mackenzie Hyman,Female,Hui Wang,Androgynous,ok
+October,42,10.1002/alz.70875,So Yeon Jeon,Androgynous,Dong Young Lee,Androgynous,ok
+October,43,10.1002/alz.70920,Sungwoo Kang,Male,for the Alzheimer's Disease Neuroimaging Initiative,Unknown,ok
+October,44,10.1002/alz.70949,Hande Karahan,Female,Jungsu Kim,Male,ok
+October,45,10.1002/alz.70885,Melvin W. King,Male,Erik S. Musiek,Male,ok
+October,46,10.1002/alz.70946,Yan Li,Male,Jianping Jia,Androgynous,ok
+October,47,10.1002/alz.70919,Anlan Lin,Unknown,Jing Zhang,Androgynous,ok
+October,48,10.1002/alz.70851,Shiwei Liu,Androgynous,Kwangsik Nho,Male,ok
+October,49,10.1002/alz.70908,Ke Liu,Androgynous,Hong Zhang,Androgynous,ok
+October,50,10.1002/alz.70871,Christina M. Magana‐Ramirez,Female,David L. Sultzer,Male,ok
+October,51,10.1002/alz.70943,Aman Mangalmurti,Male,John R. Lukens,Male,ok
+October,52,10.1002/alz.70923,Sneha Sarah Mani,Female,Lindsay C Kobayashi,Female,ok
+October,53,10.1002/alz.70864,Francesca R. Marino,Female,Phillip H. Hwang,Male,ok
+October,54,10.1002/alz.70878,Thomas H. McCoy,Male,Roy H. Perlis,Male,ok
+October,55,10.1002/alz.14381,Anna McKeever,Female,John T. O'Brien,Male,ok
+October,56,10.1002/alz.70929,Blaise W. Menta,Male,Russell H. Swerdlow,Male,ok
+October,57,10.1002/alz.70957,J. Scott Miners,Unknown,and for the Alzheimer's Disease Neuroimaging Initiative,Unknown,ok
+October,58,10.1002/alz.70912,Saira S. Mirza,Unknown,Connie Marras,Female,ok
+October,59,10.1002/alz.70850,Kyle D. Moored,Female,Michelle C. Carlson,Female,ok
+October,60,10.1002/alz.70965,Naomi Moreno,Female,Rakez Kayed,Unknown,ok
+October,61,10.1002/alz.70901,Amelia Morgan,Female,John Gallacher,Male,ok
+October,62,10.1002/alz.70951,Emma Nichols,Female,Jinkook Lee,Unknown,ok
+October,63,10.1002/alz.71012,Wepnyu Yembe Njamnshi,Unknown,LEADS Consortium,Unknown,ok
+October,64,10.1002/alz.70882,Shahram Oveisgharan,Male,David A. Bennett,Male,ok
+October,65,10.1002/alz.70915,Yuliya Patsyuk,Female,Heidi I. L. Jacobs,Female,ok
+October,66,10.1002/alz.70872,Elizabeth Pirraglia,Female,Yongzhao Shao,Androgynous,ok
+October,67,10.1002/alz.70891,Igor Prufer Q C Araujo,Male,Lawren VandeVrede,Unknown,ok
+October,68,10.1002/alz.70958,Jung‐Min Pyun,Unknown,for the Alzheimer's Disease Neuroimaging Initiative,Unknown,ok
+October,69,10.1002/alz.70852,Paulino Ramirez,Male,Bess Frost,Female,ok
+October,70,10.1002/alz.70868,Alina Renli,Female,Bruno Giordani,Male,ok
+October,71,10.1002/alz.70921,Xuewen Rong,Androgynous,Liming Shu,Androgynous,ok
+October,72,10.1002/alz.70906,Rebecca Z. Rousset,Female,Anouk den Braber,Female,ok
+October,73,10.1002/alz.14398,Mirella Russo,Female,the Alzheimer's Disease Neuroimaging Initiative,Female,ok
+October,74,10.1002/alz.70909,Sanjib Saha,Unknown,UlfG Gerdtham,Unknown,ok
+October,75,10.1002/alz.70902,Dario Saracino,Male,Isabelle Le Ber,Female,ok
+October,76,10.1002/alz.70888,Muhammad Rehan Sarwar,Male,Johnson George,Male,ok
+October,77,10.1002/alz.70904,Hiroaki Sekiya,Male,Dennis W. Dickson,Male,ok
+October,78,10.1002/alz.70917,Alissa B. Sideman,Female,Katherine L. Possin,Female,ok
+October,79,10.1002/alz.70940,Ramkrishna K. Singh,Unknown,for the Aging Adult Brain Connectome (AABC) study team,Unknown,ok
+October,80,10.1002/alz.70945,Federica Spoto,Female,Hossein Estiri,Male,ok
+October,81,10.1002/alz.70927,Claudia K. Suemoto,Female,Lea T. Grinberg,Female,ok
+October,82,10.1002/alz.70947,Sowmya N. Sundaresh,Unknown,Russell E. Nicholls,Male,ok
+October,83,10.1002/alz.70925,Willians Tambo,Unknown,Chunyan Li,Androgynous,ok
+October,84,10.1002/alz.70932,You‐Yi Tu,Unknown,Qi‐Hao Guo,Unknown,ok
+October,85,10.1002/alz.70942,Yoo Hyun Um,Androgynous,Hyun Kook Lim,Androgynous,ok
+October,86,10.1002/alz.70865,Cosar Uzun,Unknown,Shaolin Liu,Androgynous,ok
+October,87,10.1002/alz.70936,Anna M. VandeBunte,Female,Joel H. Kramer,Male,ok
+October,88,10.1002/alz.70874,Anna Vázquez‐Oliver,Female,Andrés Ozaita,Male,ok
+October,89,10.1002/alz.70934,Chao‐Yi Wu,Unknown,Hiroko H. Dodge,Female,ok
+October,90,10.1002/alz.70937,Yuexuan Xu,Unknown,Richard Mayeux,Male,ok
+October,91,10.1002/alz.70963,Rong Ye,Androgynous,Stephen N. Gomperts,Male,ok
+October,92,10.1002/alz.14402,Zhong‐Yuan Yu,Unknown,Yan‐Jiang Wang,Unknown,ok
+October,93,10.1002/alz.70893,Summan Zahra,Unknown,Craig C. Weinkauf,Male,ok
+November,2,10.1002/alz.14464,Christina Silvia Dintica,Female,Kristine Yaffe,Female,ok
+November,3,10.1002/alz.14469,Kejal Kantarci,Unknown,Michelle M. Mielke,Female,ok
+November,4,10.1002/alz.14433,Surabhi D. Abhyankar,Unknown,Ashay D. Bhatwadekar,Unknown,ok
+November,5,10.1002/alz.14461,Vibha Acharya,Female,M. Ilyas Kamboh,Unknown,ok
+November,6,10.1002/alz.14508,Nicholas J. Ashton,Male,Henrik Zetterberg,Male,ok
+November,7,10.1002/alz.14482,Alberto Benussi,Male,Barbara Borroni,Female,ok
+November,8,10.1002/alz.14471,Roshni Biswas,Female,Zoe Arvanitakis,Female,ok
+November,9,10.1002/alz.70995,Catherine P. Bondonno,Female,Nicola P. Bondonno,Female,ok
+November,10,10.1002/alz.70985,Shayna T. Brodman,Female,Thomas K. Karikari,Male,ok
+November,11,10.1002/alz.71008,Gregory A. Cary,Male,for The Emory‐Sage‐SGC‐JAX TREAT‐AD Center,Unknown,ok
+November,12,10.1002/alz.71006,Tonnar Castellano,Unknown,Mary Ellen Koran,Female,ok
+November,13,10.1002/alz.71001,Hui Chen,Androgynous,Changzheng Yuan,Androgynous,ok
+November,14,10.1002/alz.71002,Greta Jianjia Cheng,Female,Andrea L. Rosso,Female,ok
+November,15,10.1002/alz.14472,Nicola Coley,Female,the preDIVA study group and the MAPT/IHU HealthAge Open Science group,Female,ok
+November,16,10.1002/alz.70993,Sean J. Colloby,Male,John‐Paul Taylor,Unknown,ok
+November,17,10.1002/alz.70019,Scott E. Counts,Male,Debomoy K. Lahiri,Unknown,ok
+November,18,10.1002/alz.14477,Dibyadeep Datta,Unknown,Amy F. T. Arnsten,Female,ok
+November,19,10.1002/alz.70989,Ilaria Linda Dellarole,Female,Paola Caroppo,Female,ok
+November,20,10.1002/alz.71039,Lili Fang,Female,Tengfei Guo,Androgynous,ok
+November,21,10.1002/alz.71004,James E. Galvin,Male,Anthony O. Caggiano,Male,ok
+November,22,10.1002/alz.14490,Patricia Genius,Female,for the ALFA study,Unknown,ok
+November,23,10.1002/alz.70975,Deling He,Androgynous,Kimberly D. Mueller,Female,ok
+November,24,10.1002/alz.70982,Vaibhav A. Janve,Unknown,A4 and LEARN Study Group,Unknown,ok
+November,25,10.1002/alz.14456,Ainara Jauregi‐Zinkunegi,Female,Davide Bruno,Male,ok
+November,26,10.1002/alz.14506,Jiwei Jiang,Androgynous,Jun Xu,Male,ok
+November,27,10.1002/alz.14495,Jiangli Jin,Androgynous,Yue Leng,Androgynous,ok
+November,28,10.1002/alz.71010,Koung Mi Kang,Unknown,KBASE Research Group,Unknown,ok
+November,29,10.1002/alz.70984,Riley E. Kemna,Male,Jill K. Morris,Female,ok
+November,30,10.1002/alz.14534,Zaven Khachaturian,Male,Ara S. Khachaturian,Male,ok
+November,31,10.1002/alz.70968,Daniel L. Kranz,Male,William L. Klein,Male,ok
+November,32,10.1002/alz.14491,Jiahui Li,Androgynous,Chengxuan Qiu,Unknown,ok
+November,33,10.1002/alz.70990,Zixuan Lin,Unknown,Dengrong Jiang,Unknown,ok
+November,34,10.1002/alz.14479,Jr‐Jiun Liou,Unknown,for the Alzheimer Biomarker Consortium ‐ Down Syndrome,Unknown,ok
+November,35,10.1002/alz.71000,Yuntao Liu,Androgynous,Zhen Wang,Androgynous,ok
+November,36,10.1002/alz.14457,Kathy Y. Liu,Female,Robert Howard,Male,ok
+November,37,10.1002/alz.70969,Linda M. C. Lorenz,Female,Henne Holstege,Unknown,ok
+November,38,10.1002/alz.70994,Shau Yu Lynch,Unknown,Cindy Zadikoff,Female,ok
+November,39,10.1002/alz.14474,Andy Madrid,Male,Reid S. Alisch,Male,ok
+November,40,10.1002/alz.70973,Marcella Montagnese,Female,Richard A. I. Bethlehem,Male,ok
+November,41,10.1002/alz.70970,Nidhi S. Mundada,Female,for the Alzheimer's Disease Neuroimaging Initiative,Unknown,ok
+November,42,10.1002/alz.14452,Yuye Ning,Unknown,Jianping Jia,Androgynous,ok
+November,43,10.1002/alz.70987,Feng‐Feng Pan,Unknown,Qi‐Hao Guo,Unknown,ok
+November,44,10.1002/alz.14424,Arsenio Páez,Male,Gerard Piñol Ripoll,Male,ok
+November,45,10.1002/alz.14486,Wei Qin,Androgynous,Jian‐Ping Jia,Unknown,ok
+November,46,10.1002/alz.71054,Miriam Rabl,Female,Julius Popp,Male,ok
+November,47,10.1002/alz.70972,Shima Raeesi,Female,Mahsa Dadar,Female,ok
+November,48,10.1002/alz.14454,Ravi Rajmohan,Male,Claudia Kawas,Female,ok
+November,49,10.1002/alz.14478,Annie Rhodes,Female,Daniel Bluestein,Male,ok
+November,50,10.1002/alz.14423,Roos M. Rikken,Female,for ADNI,Unknown,ok
+November,51,10.1002/alz.14488,Filipa M. Rocha,Female,Amit Kumar,Male,ok
+November,52,10.1002/alz.71003,Kiana A. Scambray,Female,Laura B. Zahodne,Female,ok
+November,53,10.1002/alz.14485,Mythily Subramaniam,Unknown,Siow Ann Chong,Unknown,ok
+November,54,10.1002/alz.70991,Jonathan Tablante,Male,Jessica de Leon,Female,ok
+November,55,10.1002/alz.71016,Zeynab Tabrizi,Female,Oliver Bracko,Male,ok
+November,56,10.1002/alz.70999,Sarah Walter,Female,Michael S. Rafii,Male,ok
+November,57,10.1002/alz.71048,Marcel S. Woo,Male,Pedro Rosa‐Neto,Male,ok
+November,58,10.1002/alz.14480,Season K. Wyatt‐Johnson,Unknown,Randy R. Brutkiewicz,Male,ok
+November,59,10.1002/alz.14450,Kathryn A. Wyman‐Chick,Female,the Alzheimer's Association International Society to Advance Alzheimer's Research and Treatment (ISTAART) Lewy Body Dementias Professional Interest Area (LBD PIA) Prodromal Working Group,Female,ok
+November,60,10.1002/alz.71050,Ying Xia,Androgynous,Elizabeth J. Coulson,Female,ok
+November,61,10.1002/alz.14492,Long Xie,Male,for the Alzheimer's Disease Neuroimaging Initiative,Unknown,ok
+November,62,10.1002/alz.14475,Ye Xie,Androgynous,Yixuan Ku,Androgynous,ok
+November,63,10.1002/alz.71033,Tao Yang,Androgynous,The Emory‐Sage‐SGC‐Jax TREAT‐AD Center,Female,ok
+November,64,10.1002/alz.70974,Byoung Seok Ye,Androgynous,Won Seok Chang,Male,ok
+November,65,10.1002/alz.14465,Brian Sheng Yep Yeo,Male,Ecosse L. Lamoureux,Unknown,ok
+November,66,10.1002/alz.71022,Yao Zhang,Androgynous,Peiyu Huang,Androgynous,ok
+November,67,10.1002/alz.70983,Bowei Zhang,Androgynous,Aladdin H. Shadyab,Male,ok
+November,68,10.1002/alz.70996,Parsa Afrooz,Unknown,Maxime Montembeault,Male,ok
+November,69,10.1002/alz.71007,Julia R. Bacci,Female,Michelle M. Mielke,Female,ok
+November,70,10.1002/alz.71036,Sirena Gutierrez,Unknown,Paola Gilsanz,Female,ok
+November,71,10.1002/alz.71061,Brittany M. Hauger,Female,Heather M. Wilkins,Female,ok
+November,72,10.1002/alz.71052,Bing He,Androgynous,Yakeel T. Quiroz,Unknown,ok
+November,73,10.1002/alz.70967,Pamela Herd,Female,Michal Engelman,Male,ok
+November,74,10.1002/alz.71056,Hao Li,Androgynous,Anil M. Tuladhar,Male,ok
+November,75,10.1002/alz.71029,Ping‐Ju Lin,Unknown,"Alzheimer's Disease Neuroimaging Initiative, for the Health and Aging Brain Study (HABS‐HD) Study Team",Unknown,ok
+November,76,10.1002/alz.71059,Dae Jong Oh,Androgynous,Ki Woong Kim,Androgynous,ok
+November,77,10.1002/alz.71051,Jordan Stiver,Male,Sarah J. Banks,Female,ok
+November,78,10.1002/alz.71041,Yiyang Wu,Androgynous,Timothy J. Hohman,Male,ok
+November,79,10.1002/alz.71044,Weiwei Zhang,Androgynous,Lu Shen,Androgynous,ok
+December,2,10.1002/alz.14500,Sonal Agrawal,Female,Julie A Schneider,Female,ok
+December,3,10.1002/alz.14621,Nicholas J. Ashton,Male,Henrik Zetterberg,Male,ok
+December,4,10.1002/alz.14530,Helena Balabin,Female,Rik Vandenberghe,Male,ok
+December,5,10.1002/alz.14507,May A. Beydoun,Female,Alan B. Zonderman,Male,ok
+December,6,10.1002/alz.14544,Patricia A. Boyle,Female,Lei Yu,Androgynous,ok
+December,7,10.1002/alz.14574,Tina E. Brinkley,Female,Hossam A. Shaltout,Male,ok
+December,8,10.1002/alz.14516,Arenn F. Carlos,Unknown,Keith A. Josephs,Male,ok
+December,9,10.1002/alz.14503,Sihui Chen,Androgynous,Huifang Shang,Androgynous,ok
+December,10,10.1002/alz.14553,Minyoung Cho,Female,Kwangsik Nho,Male,ok
+December,11,10.1002/alz.14502,Joyce R. Chong,Female,Mitchell K. P. Lai,Male,ok
+December,12,10.1002/alz.14497,Jacob Alexander Cleary,Male,Gagan Deep,Unknown,ok
+December,13,10.1002/alz.14570,Karly A. Cody,Female,Sterling C. Johnson,Male,ok
+December,14,10.1002/alz.14555,Paul D. Coleman,Male,Carol J. Huseby,Female,ok
+December,15,10.1002/alz.14558,Maria Sofia Cotelli,Female,Barbara Borroni,Female,ok
+December,16,10.1002/alz.14567,Nikhil Dave,Male,Aishwarya Sukumar,Unknown,ok
+December,17,10.1002/alz.14568,Alyssa N. De Vito,Female,for the Alzheimer's Disease Neuroimaging Initiative,Unknown,ok
+December,18,10.1002/alz.14573,James D. Doecke,Male,Charlotte Teunissen,Female,ok
+December,19,10.1002/alz.14549,Michael R. Duggan,Male,Keenan A. Walker,Male,ok
+December,20,10.1002/alz.14548,Wassim Elyaman,Male,Serge Przedborski,Male,ok
+December,21,10.1002/alz.70117,Huriye Ercan,Female,Maria Zellner,Female,ok
+December,22,10.1002/alz.14525,Xuhao Fang,Unknown,Jin Hu,Female,ok
+December,23,10.1002/alz.14513,Nicolas Farina,Male,David M. Ndetei,Male,ok
+December,24,10.1002/alz.14543,Yijia Feng,Androgynous,Weihong Song,Androgynous,ok
+December,25,10.1002/alz.14542,Matthew Gabel,Male,Jessica Mozersky,Female,ok
+December,26,10.1002/alz.14521,Feng Gao,Androgynous,Yong Shen,Male,ok
+December,27,10.1002/alz.14572,Martina Del Giovane,Female,Jonathan M. Schott,Male,ok
+December,28,10.1002/alz.14510,Valentin Gonay,Male,Andrey V. Kajava,Male,ok
+December,29,10.1002/alz.14563,Sang‐Won Han,Unknown,Young Ho Park,Female,ok
+December,30,10.1002/alz.14559,Sidra Haye,Unknown,Julie Zissimopoulos,Female,ok
+December,31,10.1002/alz.14557,Marieke P. Hoevenaar‐Blom,Female,MAPT/IHU HealthAge Open Science study group,Unknown,ok
+December,32,10.1002/alz.14531,Laura E. Hughes,Female,James B. Rowe,Male,ok
+December,33,10.1002/alz.14526,Hyemin Jang,Female,the K‐ROAD study groups,Female,ok
+December,34,10.1002/alz.14511,Maria Eleni Karakatsani,Female,Xosé Luís Deán‐Ben,Male,ok
+December,35,10.1002/alz.14519,James T. Kennedy,Male,the ABC‐DS and DIAN Consortia,Female,ok
+December,36,10.1002/alz.14493,Antonija Kolobaric,Female,Helmet T. Karim,Unknown,ok
+December,37,10.1002/alz.14501,Morteza Kouhsar,Male,Katie Lunnon,Female,ok
+December,38,10.1002/alz.14550,Guoyu Lan,Androgynous,Tengfei Guo,Androgynous,ok
+December,39,10.1002/alz.14566,Sun Min Lee,Androgynous,the Longitudinal study of Early onset dementia And Family members (LEAF) investigators,Female,ok
+December,40,10.1002/alz.14528,Antoine Leuzy,Male,Gill Farrar,Female,ok
+December,41,10.1002/alz.14539,Ying Liu,Androgynous,Soeren Mattke,Unknown,ok
+December,42,10.1002/alz.14540,Liwei Ma,Androgynous,Yijun Pan,Androgynous,ok
+December,43,10.1002/alz.14561,Jeannette R. Mahoney,Female,Joe Verghese,Male,ok
+December,44,10.1002/alz.14571,Elijah Mak,Male,for the Alzheimer's Disease Neuroimaging Initiative,Unknown,ok
+December,45,10.1002/alz.14630,Molly Memel,Female,the ALLFTD Consortium,Female,ok
+December,46,10.1002/alz.14505,Jayakumar Menon,Unknown,Jyothsna Devi Kuchipudi,Unknown,ok
+December,47,10.1002/alz.14523,Erika Meza,Female,Jacqueline M. Torres,Female,ok
+December,48,10.1002/alz.14517,So Young Moon,Androgynous,Seong Hye Choi,Androgynous,ok
+December,49,10.1002/alz.14527,Cyprian M. Mostert,Male,Zul Merali,Unknown,ok
+December,50,10.1002/alz.14514,Christian Myrstad,Male,Geir Selbæk,Male,ok
+December,51,10.1002/alz.14562,Emma Nichols,Female,Jaqueline M. Torres,Female,ok
+December,52,10.1002/alz.14515,Stefania Pezzoli,Female,William J. Jagust,Male,ok
+December,53,10.1002/alz.14552,Miao Ren,Androgynous,Xiangning Li,Androgynous,ok
+December,54,10.1002/alz.14564,Bayard Rogers,Unknown,Bayard Rogers,Unknown,ok
+December,55,10.1002/alz.14545,Luisa Sophie Schneider,Female,Oliver Peters,Male,ok
+December,56,10.1002/alz.14512,Michael Sewell,Male,Axel Montagne,Male,ok
+December,57,10.1002/alz.14524,Teresa Filshtein Sönmez,Female,for the Alzheimer's Disease Neuroimaging Initiative,Unknown,ok
+December,58,10.1002/alz.14538,Ibrahim Abdu Wakawa,Male,Mahmoud Bukar Maina,Male,ok
+December,59,10.1002/alz.14547,Boye Wen,Male,Cuibai Wei,Unknown,ok
+December,60,10.1002/alz.14498,Qi Xu,Androgynous,He‐Zhou Huang,Unknown,ok
+December,61,10.1002/alz.14529,Ziming Xu,Androgynous,Huijun Chen,Androgynous,ok
+December,62,10.1002/alz.14537,Yara Yakoub,Female,PREVENT−AD Research Group,Unknown,ok
+December,63,10.1002/alz.14499,Jafar Zamani,Male,for the Alzheimer's Disease Neuroimaging Initiative,Unknown,ok
+December,64,10.1002/alz.14535,Xuemei Zeng,Androgynous,Thomas K. Karikari,Male,ok
+December,65,10.1002/alz.14496,Wei Zhang,Androgynous,Lily Wang,Female,ok
+December,66,10.1002/alz.14536,Xiaomei Zhong,Androgynous,Yuping Ning,Androgynous,ok

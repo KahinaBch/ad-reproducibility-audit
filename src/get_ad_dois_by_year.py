@@ -151,11 +151,11 @@ def main():
         "--out",
         type=Path,
         default=None,
-        help="Output CSV path (default: data/derived/ad_{year}_dois.csv)",
+        help="Output CSV path (default: data/raw/ad_{year}_dois.csv)",
     )
     args = parser.parse_args()
 
-    out_path = args.out or Path(f"data/derived/ad_{args.year}_dois.csv")
+    out_path = args.out or Path(f"data/raw/ad_{args.year}_dois.csv")
     out_path.parent.mkdir(parents=True, exist_ok=True)
 
     # Try both ISSNs and merge (deduplication by DOI)

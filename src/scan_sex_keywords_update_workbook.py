@@ -9,6 +9,7 @@ Scans PDFs for keywords indicating sex-specific or sex-stratified analyses.
 Updates the workbook columns:
   - "Sex-specific keywords?" (Yes / No)
   - "Sex keywords matched"   (list of matched keywords)
+    - "Sex-aware level"       (sex-aware main focus / sex-aware consideration)
 
 Scientific rationale:
   Despite women constituting ~65% of people living with Alzheimer's disease,
@@ -42,6 +43,11 @@ log = logging.getLogger(__name__)
 
 # ── Sex-specific keyword set ─────────────────────────────────────────────────
 SEX_KEYWORDS = [
+    # Broad terms requested by user
+    "sex",
+    "gender",
+    "woman",
+    "female",
     # Core — confirmed by user
     "sex-stratified",
     "sex stratified",
@@ -78,6 +84,14 @@ SEX_KEYWORDS = [
     "sex specific",
 ]
 
+# These broad terms are intentionally checked only in titles
+TITLE_ONLY_KEYWORDS = {
+    "sex",
+    "gender",
+    "woman",
+    "female",
+}
+
 MONTHS = [
     "January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December",
@@ -100,7 +114,7 @@ def extract_full_text_pypdf2(pdf_path: Path) -> str:
     return "\n".join(full_text)
 
 
-def detect_sex_keywords(text: str) -> list[str]:
+def detect_sex_keywords(text: str, keywords: list[str] | None = None) -> list[str]:
     """
     Detect sex-specific keywords in document text.
     Returns sorted list of matched keywords (deduplicated).
@@ -109,10 +123,30 @@ def detect_sex_keywords(text: str) -> list[str]:
     """
     text_lower = text.lower()
     matched = set()
-    for kw in SEX_KEYWORDS:
+    key_list = keywords if keywords is not None else SEX_KEYWORDS
+    for kw in key_list:
         if kw.lower() in text_lower:
             matched.add(kw)
     return sorted(matched)
+
+
+def classify_sex_aware_level(title_text: str, full_text: str) -> tuple[str, list[str], list[str]]:
+    """
+    Classify paper level:
+      - sex-aware main focus: keyword appears in title
+      - sex-aware consideration: keyword appears in main text (but not title)
+
+    Returns: (level, title_matched, full_matched)
+    """
+    title_matched = detect_sex_keywords(title_text or "")
+    fulltext_keywords = [kw for kw in SEX_KEYWORDS if kw not in TITLE_ONLY_KEYWORDS]
+    full_matched = detect_sex_keywords(full_text or "", keywords=fulltext_keywords)
+
+    if title_matched:
+        return "sex-aware main focus", title_matched, full_matched
+    if full_matched:
+        return "sex-aware consideration", title_matched, full_matched
+    return "", title_matched, full_matched
 
 
 def update_workbook_sex_keywords(
@@ -136,15 +170,20 @@ def update_workbook_sex_keywords(
 
         sex_kw_col = header.get("Sex-specific keywords?")
         sex_match_col = header.get("Sex keywords matched")
+        sex_level_col = header.get("Sex-aware level")
         fn_col = header.get("Filename")
-        doi_col = header.get("DOI")
+        title_col = header.get("Title")
 
         if not sex_kw_col or not sex_match_col:
             log.warning(f"  Sex keyword columns missing in sheet '{month}' — skipping.")
             continue
 
+        if not sex_level_col:
+            sex_level_col = ws.max_column + 1
+            ws.cell(row=1, column=sex_level_col, value="Sex-aware level")
+
         # Build filename → row map
-        fn_to_row = {}
+        fn_to_row: dict[str, int] = {}
         for row_idx in range(2, ws.max_row + 1):
             fn_val = ws.cell(row=row_idx, column=fn_col).value if fn_col else None
             if fn_val:
@@ -155,16 +194,25 @@ def update_workbook_sex_keywords(
 
         for pdf in pdfs:
             text = extract_full_text_pypdf2(pdf)
-            matched = detect_sex_keywords(text)
+            target_row = fn_to_row.get(pdf.name.lower())
+            title_text = ""
+            if target_row:
+                # In this project workbook, article title may be stored in Filename.
+                title_from_title_col = str(ws.cell(row=target_row, column=title_col).value or "") if title_col else ""
+                title_from_filename = str(ws.cell(row=target_row, column=fn_col).value or "") if fn_col else ""
+                title_text = title_from_title_col.strip() or title_from_filename.strip()
 
-            has_sex_analysis = "Yes" if matched else "No"
-            matched_str = "; ".join(matched) if matched else ""
+            level, title_matched, full_matched = classify_sex_aware_level(title_text, text)
+            all_matched = sorted(set(title_matched) | set(full_matched))
+
+            has_sex_analysis = "Yes" if all_matched else "No"
+            matched_str = "; ".join(all_matched) if all_matched else ""
 
             # Find matching workbook row
-            target_row = fn_to_row.get(pdf.name.lower())
             if target_row:
                 ws.cell(row=target_row, column=sex_kw_col, value=has_sex_analysis)
                 ws.cell(row=target_row, column=sex_match_col, value=matched_str)
+                ws.cell(row=target_row, column=sex_level_col, value=level)
             else:
                 log.warning(f"    No workbook row found for {pdf.name}")
 
@@ -172,8 +220,10 @@ def update_workbook_sex_keywords(
                 "pdf": pdf.name,
                 "month": month,
                 "sex_analysis": has_sex_analysis,
+                "sex_aware_level": level or "none",
+                "title_keywords": "; ".join(title_matched) if title_matched else "none",
                 "sex_keywords": matched_str,
-                "n_keywords": len(matched),
+                "n_keywords": len(all_matched),
             })
 
     wb.save(workbook_path)
@@ -200,7 +250,15 @@ def main():
     with open(log_path, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(
             f,
-            fieldnames=["pdf", "month", "sex_analysis", "sex_keywords", "n_keywords"],
+            fieldnames=[
+                "pdf",
+                "month",
+                "sex_analysis",
+                "sex_aware_level",
+                "title_keywords",
+                "sex_keywords",
+                "n_keywords",
+            ],
         )
         writer.writeheader()
         writer.writerows(log_rows)
